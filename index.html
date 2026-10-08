@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth" style="scroll-padding-top: 5rem;">
+<html lang="ja" class="scroll-smooth" style="scroll-padding-top: 9rem;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>若手歯科医師歓迎｜月額総支給50.5万円～・教育体制充実｜なかむら歯科クリニック（福山市）</title>
+<title>若手歯科医師歓迎｜月額総支給50.5万円～・教育体制充実｜なかむら歯科クリニック（福山市） ver.7.0</title>
 <meta name="description" content="福山市のなかむら歯科クリニックの若手歯科医師（卒後臨床経験2年目以上）向け求人。固定給をベースに、3年間の教育カリキュラムと担当Drによるサポート。週休2日・3日、産休・育休・復職実績など、安心して働きながら着実に成長できる環境を整えています。">
 <!-- 公開時に実際のURLへ変更してください -->
 <link rel="canonical" href="https://www.nakamura-sika.net/recruit/occupations/dr_lp.php">
@@ -20,7 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <!-- 開発・プレビュー用Tailwind (本番環境ではビルドプロセスを通すことを推奨します) -->
 <script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#F39800',accent:'#4D2C0D',sub:'#FFF9F0'},fontFamily:{sans:['"Noto Sans JP"','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#F39800','primary-dark':'#d68600',accent:'#4D2C0D',sub:'#FFF9F0'},fontFamily:{sans:['"Noto Sans JP"','sans-serif']}}}}</script>
 
 <style>
 .sec{padding:5rem 1rem}.in{max-width:68rem;margin:0 auto}
@@ -62,6 +62,21 @@ html.js-enabled .fade-up.is-visible{opacity:1;transform:translateY(0)}
 .salary-table td { font-size: 0.9rem; padding: 0.5rem; text-align: right; }
 .salary-table .highlight { background-color: #fff4e5; font-weight: bold; color: #F39800; }
 
+/* ヘッダー・フッター(インプラントページと共通) */
+.nav-item:hover .nav-dropdown{display:block;opacity:1;visibility:visible;transform:translateY(0)}
+.nav-dropdown{display:none;opacity:0;visibility:hidden;transform:translateY(10px);transition:all .3s ease}
+#sp-menu{transition:transform .3s ease-in-out;transform:translateX(100%)}
+#sp-menu.open{transform:translateX(0)}
+.time-table th,.time-table td{border:1px solid #e5e7eb;padding:8px;text-align:center}
+.time-table th{background-color:#f9fafb;color:#4b5563}
+.nv>li{flex:1;text-align:center;border-left:1px solid rgba(255,255,255,.2);transition:background .3s}
+.nv>li:last-child{border-right:1px solid rgba(255,255,255,.2)}
+.nv>li:hover{background:#F39800}.nv>li>a{display:block;padding:1rem 0}
+.dd a{display:block;padding:.5rem 1rem;border-radius:.25rem}.dd a:hover{background:#fff7ed;color:#F39800}
+.spt{padding:1rem 1.5rem;border-bottom:1px solid #f3f4f6;background:#f9fafb;color:#6b7280;font-size:.875rem}
+.spl a{display:block;padding:.75rem 2rem;border-bottom:1px solid #f9fafb;font-size:.875rem;font-weight:500}.spl a:hover{color:#F39800}
+.fh{font-weight:700;color:#4D2C0D;margin-bottom:1rem;border-left:4px solid #F39800;padding-left:.5rem;font-size:1rem}
+.fl li{margin-bottom:.5rem}.fl a:hover{color:#F39800}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}html.js-enabled .fade-up{opacity:1;transform:none;transition:none}}
 </style>
 
@@ -109,12 +124,52 @@ document.documentElement.classList.add('js-enabled');
 <body class="font-sans text-gray-800 leading-relaxed pb-16 md:pb-0 bg-gray-50">
 
 <header class="bg-white shadow-sm sticky top-0 z-50">
-<div class="in flex items-center justify-between px-4 py-3">
-<a href="https://www.nakamura-sika.net/recruit/"><img src="https://www.nakamura-sika.net/recruit/_share/logo_pc.png" alt="なかむら歯科クリニック" class="h-10 md:h-12 w-auto" width="280" height="48"></a>
-<div class="hidden md:flex items-center gap-4 text-sm font-bold">
-<a href="https://lin.ee/Ku62Vx0" class="text-[#06C755] hover:opacity-80 transition-opacity">LINE相談</a>
-<a href="https://www.nakamura-sika.net/recruit/mail/" class="bg-primary text-white px-5 py-2.5 rounded-full hover:bg-orange-500 transition-colors shadow-sm">見学を申し込む</a>
-</div></div>
+<div class="bg-gray-50 border-b border-gray-100 py-1 hidden md:block"><div class="max-w-6xl mx-auto px-4"><p class="text-xs text-gray-500">歯科医師求人｜福山市 なかむら歯科クリニック</p></div></div>
+<div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+<a href="https://www.nakamura-sika.net/" class="inline-block"><img src="https://www.nakamura-sika.net/_share/logo.png" alt="なかむら歯科クリニック" class="h-10 md:h-14 object-contain"></a>
+<div class="hidden md:flex items-center gap-6">
+<div class="text-right flex flex-col items-end"><p class="text-xs font-bold text-gray-500 mb-0.5">お気軽にご相談ください</p>
+<div class="flex items-end gap-3"><a href="tel:084-982-9800" class="text-lg font-bold text-accent">084-982-9800</a><a href="tel:0120-084-982" class="text-xl font-bold text-primary">☎ 0120-084-982</a></div></div>
+<a href="https://lin.ee/Ku62Vx0" class="bg-[#06C755] hover:opacity-90 text-white px-5 py-3 rounded-full font-bold transition-opacity shadow-md text-sm">LINE相談</a>
+<a href="https://www.nakamura-sika.net/recruit/mail/" class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-bold transition-colors shadow-md text-sm">見学を申し込む</a>
+</div>
+<button id="hamburger-btn" aria-label="メニューを開く" class="md:hidden p-2 text-gray-600 focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+</div>
+
+<!-- PC用ナビゲーション -->
+<div class="bg-accent hidden md:block"><nav class="max-w-6xl mx-auto px-4"><ul class="nv flex text-white text-sm font-bold">
+<li><a href="https://www.nakamura-sika.net/">HOME</a></li>
+<li class="relative nav-item"><a href="#">診療内容 ▾</a>
+<div class="nav-dropdown absolute top-full left-0 w-[480px] bg-white shadow-xl border-t-2 border-primary z-50 text-left p-4"><div class="grid grid-cols-2 gap-4">
+<ul class="dd text-gray-700 font-medium space-y-1">
+<li><a href="https://www.nakamura-sika.net/dental/general.php">むし歯</a></li><li><a href="https://www.nakamura-sika.net/dental/preventive.php">予防歯科</a></li><li><a href="https://www.nakamura-sika.net/dental/esthetic.php">審美歯科（メタルフリー）</a></li><li><a href="https://www.nakamura-sika.net/dental/implant.php">インプラント</a></li><li><a href="https://www.nakamura-sika.net/dental/bridge.php">ブリッジ治療</a></li><li><a href="https://www.nakamura-sika.net/dental/denture.php">入れ歯治療</a></li><li><a href="https://www.nakamura-sika.net/lp_invisalign/">インビザライン</a></li><li><a href="https://www.nakamura-sika.net/dental/orthodontic.php">矯正治療</a></li><li><a href="https://www.nakamura-sika.net/dental/whitening.php">ホワイトニング</a></li></ul>
+<ul class="dd text-gray-700 font-medium space-y-1">
+<li><a href="https://www.nakamura-sika.net/dental/kids.php">小児歯科</a></li><li><a href="https://www.nakamura-sika.net/dental/preortho.php">プレオルソこども矯正</a></li><li><a href="https://www.nakamura-sika.net/dental/maternity.php">マタニティ歯科</a></li><li><a href="https://www.nakamura-sika.net/dental/surgery.php">口腔外科</a></li><li><a href="https://www.nakamura-sika.net/dental/price.php">治療費用</a></li><li><a href="https://www.nakamura-sika.net/dental/housecall.php">訪問歯科診療</a></li><li><a href="https://www.nakamura-sika.net/lifetime/maternity_baby.php">妊婦さん向けメッセージ</a></li><li><a href="https://www.nakamura-sika.net/lifetime/adult.php">成人向け治療・セカンドオピニョン</a></li><li><a href="https://www.nakamura-sika.net/lifetime/senior.php">シニア向け・こだわりの入れ歯</a></li></ul>
+</div></div></li>
+<li><a href="https://www.nakamura-sika.net/staff/">院長・スタッフ紹介</a></li>
+<li class="relative nav-item"><a href="https://www.nakamura-sika.net/clinic.php">クリニック紹介 ▾</a>
+<div class="nav-dropdown absolute top-full left-0 w-64 bg-white shadow-xl border-t-2 border-primary z-50 text-left"><ul class="dd py-2 text-gray-700 font-medium"><li><a href="https://www.nakamura-sika.net/ct.php">歯科用CT</a></li><li><a href="https://www.nakamura-sika.net/chatai/">Aiチャットご利用上の注意点</a></li></ul></div></li>
+<li><a href="https://www.nakamura-sika.net/first.php">初めてお越しの方へ</a></li>
+<li><a href="https://www.nakamura-sika.net/access.php">地図・駐車場</a></li>
+<li class="relative nav-item"><a href="#">その他のサイト ▾</a>
+<div class="nav-dropdown absolute top-full right-0 w-64 bg-white shadow-xl border-t-2 border-primary z-50 text-left"><ul class="dd py-2 text-gray-700 font-medium">
+<li><a href="https://www.nakamura-sika.net/recruit/" target="_blank" rel="noopener">求人専用サイト</a></li><li><a href="https://www.nakamura-sika.net/orthodontic/" target="_blank" rel="noopener">矯正歯科専用サイト</a></li><li><a href="http://www.fukuyama-ceramics.com/" target="_blank" rel="noopener">審美歯科専用サイト</a></li><li><a href="http://www.fukuyama-denture.com/" target="_blank" rel="noopener">精密義歯・入れ歯専用サイト</a></li></ul></div></li>
+</ul></nav></div>
+
+<!-- スマホ用メニュー (Drawer) -->
+<div id="sp-menu" class="fixed inset-y-0 right-0 w-72 bg-white shadow-2xl z-[60] flex flex-col md:hidden overflow-y-auto">
+<div class="flex justify-end p-4 border-b border-gray-100"><button id="close-menu-btn" aria-label="メニューを閉じる" class="p-2 text-gray-500 focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+<nav class="flex-grow pb-20 text-accent font-bold">
+<a href="https://www.nakamura-sika.net/" class="block px-6 py-4 border-b border-gray-100 hover:bg-orange-50">HOME</a>
+<div class="spt">診療内容</div>
+<div class="spl bg-white"><a href="https://www.nakamura-sika.net/dental/general.php">むし歯</a><a href="https://www.nakamura-sika.net/dental/preventive.php">予防歯科</a><a href="https://www.nakamura-sika.net/dental/esthetic.php">審美歯科（メタルフリー）</a><a href="https://www.nakamura-sika.net/dental/implant.php">インプラント</a><a href="https://www.nakamura-sika.net/dental/bridge.php">ブリッジ治療</a><a href="https://www.nakamura-sika.net/dental/denture.php">入れ歯治療</a><a href="https://www.nakamura-sika.net/lp_invisalign/">インビザライン</a><a href="https://www.nakamura-sika.net/dental/orthodontic.php">矯正治療</a><a href="https://www.nakamura-sika.net/dental/whitening.php">ホワイトニング</a><a href="https://www.nakamura-sika.net/dental/kids.php">小児歯科</a><a href="https://www.nakamura-sika.net/dental/preortho.php">プレオルソこども矯正</a><a href="https://www.nakamura-sika.net/dental/maternity.php">マタニティ歯科</a><a href="https://www.nakamura-sika.net/dental/surgery.php">口腔外科</a><a href="https://www.nakamura-sika.net/dental/price.php">治療費用</a><a href="https://www.nakamura-sika.net/dental/housecall.php">訪問歯科診療</a><a href="https://www.nakamura-sika.net/lifetime/maternity_baby.php">妊婦さん向けメッセージ</a><a href="https://www.nakamura-sika.net/lifetime/adult.php">成人向け治療・セカンドオピニョン</a><a href="https://www.nakamura-sika.net/lifetime/senior.php">シニア向け・こだわりの入れ歯</a></div>
+<a href="https://www.nakamura-sika.net/staff/" class="block px-6 py-4 border-b border-gray-100 hover:bg-orange-50">院長・スタッフ紹介</a>
+<div class="spt">医院のご案内</div>
+<div class="spl bg-white"><a href="https://www.nakamura-sika.net/first.php">初めてお越しの方へ</a><a href="https://www.nakamura-sika.net/clinic.php">クリニック紹介</a><a href="https://www.nakamura-sika.net/ct.php">歯科用CT</a><a href="https://www.nakamura-sika.net/access.php">地図・駐車場</a><a href="https://www.nakamura-sika.net/chatai/">Aiチャットご利用上の注意点</a></div>
+<div class="spt">その他のサイト</div>
+<div class="spl bg-white"><a href="https://www.nakamura-sika.net/recruit/" target="_blank" rel="noopener">求人専用サイト</a><a href="https://www.nakamura-sika.net/orthodontic/" target="_blank" rel="noopener">矯正歯科専用サイト</a><a href="http://www.fukuyama-ceramics.com/" target="_blank" rel="noopener">審美歯科専用サイト</a><a href="http://www.fukuyama-denture.com/" target="_blank" rel="noopener">精密義歯・入れ歯専用サイト</a></div>
+</nav></div>
+<div id="sp-menu-overlay" class="fixed inset-0 bg-black/50 z-[55] hidden md:hidden"></div>
 </header>
 
 <main>
@@ -122,7 +177,7 @@ document.documentElement.classList.add('js-enabled');
 <img src="images/01.jpg" alt="なかむら歯科クリニックの院内" loading="eager" class="absolute inset-0 w-full h-full object-cover opacity-10" width="1920" height="1080">
 <div class="in relative sec grid md:grid-cols-2 gap-10 items-center pt-12 md:pt-20 pb-16">
 <div class="fade-up">
-<span class="inline-block bg-white text-primary text-sm font-bold px-3 py-1 rounded-full mb-4 border border-orange-200">福山市｜歯科医師求人（若手歯科医師歓迎）</span>
+<span class="inline-block bg-white text-primary text-sm font-bold px-3 py-1 rounded-full mb-4 border border-orange-200">福山市｜歯科医師求人（若手歯科医師歓迎）ver.7.0</span>
 <h1 class="text-3xl md:text-5xl font-black text-accent leading-tight mb-6">
 安心して働きながら、<br>
 着実に成長する。
@@ -156,7 +211,7 @@ document.documentElement.classList.add('js-enabled');
 </div>
 <div class="fade-up delay-200 hidden md:block">
 <div class="relative">
-<img src="images/02.JPG" alt="院長と歯科医師" loading="eager" class="w-full h-auto aspect-[4/5] object-cover rounded-2xl shadow-xl border-8 border-white relative z-10 rotate-1 hover:rotate-0 transition-transform duration-500" width="600" height="750">
+<img src="images/02.JPG" alt="院長と歯科医師" loading="eager" class="w-full h-auto aspect-[3/2] object-cover rounded-2xl shadow-xl border-8 border-white relative z-10 rotate-1 hover:rotate-0 transition-transform duration-500" width="600" height="400">
 <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-200 rounded-full z-0 mix-blend-multiply opacity-50"></div>
 <div class="absolute -top-6 -left-6 w-24 h-24 bg-yellow-200 rounded-full z-0 mix-blend-multiply opacity-50"></div>
 </div>
@@ -581,9 +636,13 @@ document.documentElement.classList.add('js-enabled');
 <section class="sec" id="voice"><div class="in">
 <h2 class="h2 text-center mb-10 fade-up">先輩歯科医師の声</h2>
 <div class="grid md:grid-cols-3 gap-6">
-<article class="card card-hover fade-up"><img src="images/21.jpg" alt="先輩歯科医師1" loading="lazy" class="ph aspect-video mb-4" width="300" height="168"><b class="text-accent text-lg block mb-2 pb-2 border-b border-gray-200">奥羽大学卒</b><p class="text-sm text-gray-700 leading-relaxed">医院経営のノウハウがマニュアル化・仕組み化されていることに惹かれて入職。月に1度の個別面談で、ゆっくり相談できたそうです。</p></article>
-<article class="card card-hover fade-up delay-100"><img src="images/22.jpg" alt="先輩歯科医師2" loading="lazy" class="ph aspect-video mb-4" width="300" height="168"><b class="text-accent text-lg block mb-2 pb-2 border-b border-gray-200">徳島大学卒・勤務3年</b><p class="text-sm text-gray-700 leading-relaxed">幅広い臨床経験とスタッフ同士の連携に魅力を感じて入職。困ったときに相談しやすく、周囲と連携して進められる職場だと話しています。</p></article>
-<article class="card card-hover fade-up delay-200"><img src="images/23.jpg" alt="先輩歯科医師3" loading="lazy" class="ph aspect-video mb-4" width="300" height="168"><b class="text-accent text-lg block mb-2 pb-2 border-b border-gray-200">朝日大学卒</b><p class="text-sm text-gray-700 leading-relaxed">治療計画の立案から治療終了まで担当でき、困ったときは院長や他の先生がフォローしてくれるので安心とのことです。</p></article>
+<article class="card card-hover fade-up"><img src="images/21.jpg" alt="先輩歯科医師1" loading="lazy" class="ph aspect-video mb-4" width="300" height="168"><b class="text-accent text-lg block mb-2 pb-2 border-b border-gray-200">徳島大学卒</b><p class="text-sm text-gray-700 leading-relaxed">職場の雰囲気は明るく、困ったことや気になることがあれば相談しやすい環境だと感じています。
+歯科医師だけでなく、衛生士さんや受付スタッフも含めて、患者様のためにどうするのが良いかを自然に話し合えるところが、この医院の良さだと思います。
+</p></article>
+<article class="card card-hover fade-up delay-100"><img src="images/22.jpg" alt="先輩歯科医師2" loading="lazy" class="ph aspect-video mb-4" width="300" height="168"><b class="text-accent text-lg block mb-2 pb-2 border-b border-gray-200">朝日大学卒</b><p class="text-sm text-gray-700 leading-relaxed">全ての症例に対して治療計画立案から治療終了まで1人で行うことができます。
+また症例相談したい場合や、治療で助けが必要になった場合は院長をはじめ、他の先生方がフォローしてくださるので安心です。
+私は治療時間が押してしまった時にはいつも助けていただいています。</p></article>
+<article class="card card-hover fade-up delay-200"><img src="images/23.jpg" alt="先輩歯科医師3" loading="lazy" class="ph aspect-video mb-4" width="300" height="168"><b class="text-accent text-lg block mb-2 pb-2 border-b border-gray-200">鶴見大学卒（卒業歯科医師）</b><p class="text-sm text-gray-700 leading-relaxed">就職前に、見学した風景と自分が勤務してから見る風景に差がなかったことは良かったです。スタッフ同士も仲が良く、勤務しやすいと考えています。また、採用面接時に、自分が希望していた自費治療も手掛けることができ、大変満足しています。</p></article>
 </div>
 <div class="mt-6 text-center"><span class="chk">【要確認】先輩Drの声は内容確認中（保留）</span></div>
 </div></section>
@@ -595,8 +654,8 @@ document.documentElement.classList.add('js-enabled');
 </div>
 <div class="grid md:grid-cols-3 gap-10 md:gap-6 mt-10 mb-10 pt-4">
 <div class="card text-center fade-up relative card-hover pt-10"><div class="sn bg-primary">1</div><h3 class="font-bold text-accent text-lg mb-3 mt-1">まずは見学</h3><img src="images/24.jpg" alt="見学の様子" loading="lazy" class="ph aspect-video mb-3" width="300" height="168"><p class="text-sm text-gray-700">面接なしで、医院の雰囲気だけでも歓迎です。</p></div>
-<div class="card text-center fade-up delay-100 relative card-hover pt-10"><div class="sn bg-[#06C755]">2</div><h3 class="font-bold text-accent text-lg mb-3 mt-1">LINE・ZOOMで相談</h3><div class="bg-gray-50 aspect-video mb-3 rounded-xl flex items-center justify-center text-4xl">💬</div><p class="text-sm text-gray-700">給与や働き方も気軽に質問できます。<br><a class="text-primary hover:underline font-bold mt-1 inline-block" href="https://www.nakamura-sika.net/recruit/zoom/">ZOOM面接について</a></p></div>
-<div class="card text-center fade-up delay-200 relative card-hover pt-10"><div class="sn bg-accent">3</div><h3 class="font-bold text-accent text-lg mb-3 mt-1">面接・応募</h3><div class="bg-gray-50 aspect-video mb-3 rounded-xl flex items-center justify-center text-4xl">📄</div><p class="text-sm text-gray-700">書類選考・面接・見学を経て、採用の決定となります。</p></div></div>
+<div class="card text-center fade-up delay-100 relative card-hover pt-10"><div class="sn bg-[#06C755]">2</div><h3 class="font-bold text-accent text-lg mb-3 mt-1">LINE・ZOOMで相談</h3><img src="images/25.jpg" alt="LINE・ZOOMで相談する様子" loading="lazy" class="ph aspect-video mb-3" width="300" height="168">p class="text-sm text-gray-700">給与や働き方も気軽に質問できます。<br><a class="text-primary hover:underline font-bold mt-1 inline-block" href="https://www.nakamura-sika.net/recruit/zoom/">ZOOM面接について</a></p></div>
+<div class="card text-center fade-up delay-200 relative card-hover pt-10"><div class="sn bg-accent">3</div><h3 class="font-bold text-accent text-lg mb-3 mt-1">面接・応募</h3><img src="images/26.jpg" alt="面接・応募の様子" loading="lazy" class="ph aspect-video mb-3" width="300" height="168"><p class="text-sm text-gray-700">書類選考・面接・見学を経て、採用の決定となります。</p></div></div>
 </div></section>
 
 <section class="sec" id="faq"><div class="in faq fade-up">
@@ -651,28 +710,43 @@ document.documentElement.classList.add('js-enabled');
 </section>
 </main>
 
-<footer class="sec bg-gray-100 text-sm"><div class="in grid md:grid-cols-2 gap-8 items-center">
-<div>
-<img src="https://www.nakamura-sika.net/recruit/_share/logo_pc.png" alt="なかむら歯科クリニック" loading="lazy" class="h-10 mb-4 mix-blend-multiply opacity-80" width="280" height="48">
-<p class="text-gray-600 mb-1 font-bold">なかむら歯科クリニック</p>
-<p class="text-gray-600 mb-1">〒721-0942 広島県福山市引野町3丁目37-27</p>
-<p class="text-gray-500 text-xs mb-4">JR山陽本線「東福山駅」南口から徒歩約10分／駐車場61台</p>
-<p class="text-gray-400">Copyright&copy; なかむら歯科クリニック All Rights Reserved.</p>
+<footer class="bg-gray-100 pt-16 pb-24 md:pb-8 border-t border-gray-200 text-sm"><div class="max-w-6xl mx-auto px-4">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 border-b border-gray-300 pb-12">
+<div><h4 class="fh">診療内容 1</h4><ul class="fl text-gray-600"><li><a href="https://www.nakamura-sika.net/dental/general.php">むし歯</a></li><li><a href="https://www.nakamura-sika.net/dental/preventive.php">予防歯科</a></li><li><a href="https://www.nakamura-sika.net/dental/esthetic.php">審美歯科（メタルフリー）</a></li><li><a href="https://www.nakamura-sika.net/dental/implant.php">インプラント</a></li><li><a href="https://www.nakamura-sika.net/dental/denture.php">入れ歯治療</a></li><li><a href="https://www.nakamura-sika.net/dental/bridge.php">ブリッジ治療</a></li><li><a href="https://www.nakamura-sika.net/lp_invisalign/">インビザライン</a></li><li><a href="https://www.nakamura-sika.net/dental/orthodontic.php">矯正治療</a></li><li><a href="https://www.nakamura-sika.net/dental/whitening.php">ホワイトニング</a></li></ul></div>
+<div><h4 class="fh">診療内容 2</h4><ul class="fl text-gray-600"><li><a href="https://www.nakamura-sika.net/dental/kids.php">小児歯科</a></li><li><a href="https://www.nakamura-sika.net/dental/maternity.php">マタニティ歯科</a></li><li><a href="https://www.nakamura-sika.net/dental/surgery.php">口腔外科</a></li><li><a href="https://www.nakamura-sika.net/dental/preortho.php">プレオルソこども矯正</a></li><li><a href="https://www.nakamura-sika.net/dental/housecall.php">訪問歯科診療</a></li><li><a href="https://www.nakamura-sika.net/lifetime/maternity_baby.php">妊婦さん向けメッセージ</a></li><li><a href="https://www.nakamura-sika.net/lifetime/adult.php">成人向け治療・セカンドオピニョン</a></li><li><a href="https://www.nakamura-sika.net/lifetime/senior.php">シニア向け・こだわりの入れ歯</a></li></ul></div>
+<div><h4 class="fh">医院のご案内</h4><ul class="fl text-gray-600"><li><a href="https://www.nakamura-sika.net/">HOME</a></li><li><a href="https://www.nakamura-sika.net/staff/">院長・スタッフ紹介</a></li><li><a href="https://www.nakamura-sika.net/clinic.php">クリニック紹介</a></li><li><a href="https://www.nakamura-sika.net/ct.php">医療用CT</a></li><li><a href="https://www.nakamura-sika.net/first.php">初めてお越しの方へ</a></li><li><a href="https://www.nakamura-sika.net/access.php">地図・駐車場</a></li><li><a href="https://www.nakamura-sika.net/lifetime/kidsclub.php">キッズクラブ</a></li></ul></div>
+<div><h4 class="fh">ご相談・その他</h4><ul class="fl text-gray-600"><li><a href="https://www.nakamura-sika.net/consultation/">無料相談</a></li><li><a href="https://lin.ee/Ku62Vx0">LINEで採用相談</a></li><li><a href="https://www.nakamura-sika.net/chatai/">Aiチャットご利用上の注意点</a></li><li><a href="https://www.nakamura-sika.net/recruit/" target="_blank" rel="noopener">求人専用サイト</a></li><li><a href="https://www.nakamura-sika.net/orthodontic/" target="_blank" rel="noopener">矯正歯科専用サイト</a></li><li><a href="http://www.fukuyama-ceramics.com/" target="_blank" rel="noopener">審美歯科専用サイト</a></li><li><a href="http://www.fukuyama-denture.com/" target="_blank" rel="noopener">精密義歯・入れ歯専用サイト</a></li></ul></div>
 </div>
-<img src="images/25.jpg" alt="医院外観" loading="lazy" class="rounded-xl object-cover h-40 w-full opacity-80" width="600" height="160">
+<div class="flex flex-col lg:flex-row gap-10 items-start justify-between mb-8">
+<div class="w-full lg:w-1/2">
+<img src="https://www.nakamura-sika.net/_share/logo.png" alt="なかむら歯科クリニック" class="h-12 object-contain mb-4">
+<p class="text-gray-700 font-bold text-lg mb-2">なかむら歯科クリニック</p>
+<div class="text-gray-600 space-y-1 mb-4"><p>住所 〒721-0942</p><p>広島県福山市引野町３丁目３７−２７</p><p class="text-xs">駐車場６１台完備</p><p class="mt-2 text-xs">交通</p><p class="text-xs">電車⇒東福山駅南口から直進つきあたり 800m</p><p class="text-xs">車⇒国道2号線東福山駅交差点を南に 500m</p></div>
+<div class="bg-white p-4 rounded border border-gray-200 inline-block w-full sm:w-auto"><p class="text-lg font-bold text-accent">電話番号：<a href="tel:084-982-9800" class="hover:text-primary transition-colors">084-982-9800</a></p><p class="text-xl font-bold text-primary mt-1">フリーダイヤル：<a href="tel:0120-084-982" class="hover:text-primary-dark transition-colors">0120-084-982</a></p></div>
+</div>
+<div class="w-full lg:w-1/2 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+<table class="w-full text-sm time-table mb-3 border-collapse"><thead><tr><th class="w-1/4">診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="text-blue-600">土</th><th class="text-red-600">日祝</th></tr></thead>
+<tbody><tr><td class="font-bold text-gray-700">8:30〜17:30</td><td class="font-bold text-primary text-lg">★</td><td class="font-bold text-primary text-lg">★</td><td class="font-bold text-primary text-lg">★</td><td class="font-bold text-primary text-lg">★</td><td class="font-bold text-primary text-lg">★</td><td class="font-bold text-gray-700 text-lg">●</td><td class="font-bold text-red-600 text-lg">×</td></tr></tbody></table>
+<p class="text-xs text-primary mb-2 font-bold">お昼も休まず常時営業</p>
+<p class="text-xs text-gray-600 mb-1">最終受付：17:00 休診日：日曜・祝日</p>
+<p class="text-xs text-gray-600 p-2 bg-orange-50 rounded mt-2">保育士による託児サービス<br>★印は託児サービス有（10時～13時まで）</p>
+</div></div>
+<div class="text-center text-gray-500 pt-6 border-t border-gray-300 text-xs">Copyright&copy; なかむら歯科クリニック All Rights Reserved.</div>
 </div></footer>
 
-<nav class="fixed bottom-0 inset-x-0 z-40 md:hidden flex text-center text-xs font-bold h-16 bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]" aria-label="お問い合わせ">
-<a href="tel:0120-084-982" class="flex-1 flex flex-col items-center justify-center text-accent hover:bg-gray-50 border-r border-gray-100">
-<span class="text-lg mb-0.5">📞</span><span>TEL</span>
+<!-- スマホ用追従フッターバー -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-2px_10px_rgba(0,0,0,0.1)] z-40 md:hidden flex justify-between h-16">
+<a href="tel:0120-084-982" class="flex-1 flex flex-col items-center justify-center text-accent border-r border-gray-100"><span class="text-lg">📞</span><span class="text-[10px] font-bold">TEL</span></a>
+<a href="https://www.nakamura-sika.net/recruit/mail/" class="flex-1 flex flex-col items-center justify-center text-white bg-primary"><span class="text-lg">🏥</span><span class="text-[10px] font-bold">見学申込</span></a>
+<a href="https://lin.ee/Ku62Vx0" class="flex-1 flex flex-col items-center justify-center text-[#06C755] border-l border-gray-100"><span class="text-lg">💬</span><span class="text-[10px] font-bold">LINE相談</span></a>
+<a href="https://www.nakamura-sika.net/access.php" class="flex-1 flex flex-col items-center justify-center text-accent border-l border-gray-100"><span class="text-lg">📍</span><span class="text-[10px] font-bold">アクセス</span></a>
+</div>
+
+<!-- 固定浮遊要素（AIチャット） -->
+<a href="https://www.nakamura-sika.net/chatai/" class="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-40 bg-white rounded-full shadow-xl border-2 border-primary w-16 h-16 flex items-center justify-center hover:scale-110 transition-transform duration-300 group">
+<div class="absolute -top-10 -right-2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">AIチャットに質問する</div>
+<img src="https://placehold.co/100x100/FFF9F0/F39800?text=AI" alt="AIチャット" class="w-10 h-10 object-contain rounded-full">
 </a>
-<a href="https://lin.ee/Ku62Vx0" class="flex-1 flex flex-col items-center justify-center bg-[#06C755] text-white">
-<span class="text-lg mb-0.5">💬</span><span>LINE</span>
-</a>
-<a href="https://www.nakamura-sika.net/recruit/mail/" class="flex-[1.2] flex flex-col items-center justify-center bg-primary text-white">
-<span class="text-lg mb-0.5">🏥</span><span>見学申込</span>
-</a>
-</nav>
 
 <script>
 /* スクロールフェードアップ (JS有効時のみ動作) */
@@ -683,6 +757,12 @@ document.addEventListener("DOMContentLoaded",function(){
   }
 });
 
+/* スマホ用ハンバーガーメニュー */
+document.addEventListener('DOMContentLoaded',function(){
+  var b=document.getElementById('hamburger-btn'),c=document.getElementById('close-menu-btn'),m=document.getElementById('sp-menu'),o=document.getElementById('sp-menu-overlay');
+  function t(){m.classList.toggle('open');var open=m.classList.contains('open');o.classList.toggle('hidden',!open);document.body.style.overflow=open?'hidden':''}
+  if(b&&c&&o){b.addEventListener('click',t);c.addEventListener('click',t);o.addEventListener('click',t)}
+});
 /* プレビュー用：画像が無い場合は「画像準備中」のダミー画像に差し替え */
 /* 本番環境ではプレースホルダーへのフォールバックに依存せず、正確な画像パスを設定してください */
 function ph(i){i.onerror=null;i.src='https://placehold.co/600x400/FFF9F0/F39800?text=画像準備中'}
@@ -693,3 +773,4 @@ document.querySelectorAll('img[src^="images/"]').forEach(i=>{
 </script>
 </body>
 </html>
+
