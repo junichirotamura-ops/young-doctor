@@ -176,17 +176,25 @@
     display: none;
     opacity: 0;
     visibility: hidden;
-  /* スマホドロワー（待機時にモバイルのレイアウト幅を広げないようvisibility制御） */
+    transform: translateY(8px);
+    transition: all 0.25s ease;
+  }
+
+  /* スマホドロワー（待機時は完全に非表示にし、開いた時のみスライド表示） */
   #sp-menu {
-    visibility: hidden;
-    pointer-events: none;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
-    transform: translateX(100%);
+    display: none;
   }
   #sp-menu.open {
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateX(0);
+    display: flex;
+    animation: spMenuSlideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes spMenuSlideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 
   /* アコーディオン */
@@ -398,7 +406,7 @@
 </header>
 
 <!-- スマホ用ドロワーメニュー -->
-<div id="sp-menu" class="fixed inset-y-0 right-0 w-72 max-w-[85vw] bg-white shadow-2xl z-[70] flex flex-col md:hidden overflow-y-auto">
+<div id="sp-menu" class="fixed inset-y-0 right-0 w-72 max-w-[85vw] bg-white shadow-2xl z-[70] flex-col md:hidden overflow-y-auto">
   <div class="flex justify-between items-center p-4 bg-navy text-white">
     <span class="font-en text-xs font-bold tracking-widest">MENU</span>
     <button id="close-menu-btn" aria-label="メニューを閉じる" class="p-1 text-white">
