@@ -984,201 +984,261 @@
       </div>
     </div>
 
-    <!-- 6つの教育・サポートテーマ（大判写真＋短い見出し＋2〜3行の説明＋補足情報） -->
-    <div class="grid md:grid-cols-2 gap-8 lg:gap-10 mb-16">
+    <!-- 6つの教育・サポートテーマ（01〜06 左右交互エディトリアルレイアウト） -->
+    <div class="space-y-16 lg:space-y-24 mb-20">
       
-      <!-- ① 基礎から学べる研修体制 -->
-      <article class="min-w-0 border border-mainblue/25 rounded-xl overflow-hidden bg-white shadow-xs flex flex-col group reveal-up">
-        <div class="relative aspect-[16/10] overflow-hidden bg-secblue">
-          <img src="images/10.jpg"
-               data-fallback="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85"
-               alt="① 基礎から学べる研修体制：マネキン・模型実習"
-               class="w-full h-full object-cover photo-trust" loading="lazy">
-          <div class="absolute top-3 left-3 bg-mainblue text-white px-3.5 py-1.5 rounded-md font-en text-xs font-extrabold tracking-widest">
-            SUPPORT 01 / BASIC TRAINING
+      <!-- 01 基礎から学べる研修体制（左：写真 ／ 右：テキスト） -->
+      <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center group reveal-up">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="relative overflow-hidden rounded-xl shadow-lg bg-secblue">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="images/10.jpg"
+                   data-fallback="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1100&q=85"
+                   alt="01 基礎から学べる研修体制：マネキン・模型実習"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+            <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-navy/95 text-white px-4 py-2 font-en text-[10px] sm:text-xs font-bold tracking-[0.18em] uppercase shadow-md">
+              BASIC TRAINING // MANNEQUIN &amp; MODEL PRACTICE
+            </div>
+            <span class="fallback-badge hidden absolute top-3 right-3 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
+              ※イメージ写真（模型実習写真へ差し替え予定）
+            </span>
           </div>
-          <span class="fallback-badge hidden absolute bottom-2 right-2 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
-            ※イメージ写真（模型実習写真へ差し替え予定）
-          </span>
         </div>
-        <div class="p-6 sm:p-8 flex-grow flex flex-col">
-          <h3 class="text-xl sm:text-2xl font-black text-navy mb-3">
-            ① 基礎から学べる研修体制
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative mb-3">
+            <span class="font-en text-6xl sm:text-7xl font-extrabold text-mainblue/15 leading-none select-none block" aria-hidden="true">01</span>
+            <span class="font-en text-[11px] sm:text-xs font-extrabold tracking-[0.2em] text-brand uppercase block -mt-4 sm:-mt-5 relative z-10">
+              BASIC TRAINING // 01
+            </span>
+          </div>
+          <h3 class="text-xl sm:text-2xl lg:text-[1.7rem] font-black text-navy leading-snug mb-4">
+            基礎から学べる研修体制
           </h3>
-          <p class="text-sm text-navy/75 leading-relaxed mb-5">
+          <div class="w-10 h-0.5 bg-brand mb-5"></div>
+          <p class="text-sm text-navy/80 leading-relaxed mb-5">
             いきなり患者様の診療を任せるのではなく、マネキンやシンプルな模型を使った実習とテキスト学習からスタート。チェックシートで習得状況を一つずつ確認しながら、基礎技術を段階的に身につける仕組みです。
           </p>
-          <div class="mt-auto pt-4 border-t border-slate-200 space-y-2">
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy">
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">マネキン・模型実習</span>
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">テキスト活用学習</span>
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">チェックシート確認</span>
-            </div>
-            <p class="text-[11px] text-navy/60">※研修の実施頻度・チェックシートの現行運用については確認中です。</p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy mb-2.5">
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">マネキン・模型実習</span>
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">テキスト活用学習</span>
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">チェックシート確認</span>
           </div>
+          <p class="text-[11px] text-navy/60">※研修の実施頻度・チェックシートの現行運用については確認中です。</p>
         </div>
       </article>
 
-      <!-- ② 院長・先輩Drによる個別指導 -->
-      <article class="min-w-0 border border-mainblue/25 rounded-xl overflow-hidden bg-white shadow-xs flex flex-col group reveal-up">
-        <div class="relative aspect-[16/10] overflow-hidden bg-secblue">
-          <img src="images/08.jpg"
-               data-fallback="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85"
-               alt="② 院長・先輩Drによる個別指導"
-               class="w-full h-full object-cover photo-trust" loading="lazy">
-          <div class="absolute top-3 left-3 bg-mainblue text-white px-3.5 py-1.5 rounded-md font-en text-xs font-extrabold tracking-widest">
-            SUPPORT 02 / INDIVIDUAL MENTORING
+      <!-- 02 院長・先輩Drによる個別指導（左：テキスト ／ 右：写真） -->
+      <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center group reveal-up">
+        <div class="lg:col-span-7 lg:order-2 min-w-0">
+          <div class="relative overflow-hidden rounded-xl shadow-lg bg-secblue">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="images/08.jpg"
+                   data-fallback="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1100&q=85"
+                   alt="02 院長・先輩Drによる個別指導"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+            <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-navy/95 text-white px-4 py-2 font-en text-[10px] sm:text-xs font-bold tracking-[0.18em] uppercase shadow-md">
+              INDIVIDUAL MENTORING // SENIOR DOCTOR SUPPORT
+            </div>
+            <span class="fallback-badge hidden absolute top-3 right-3 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
+              ※イメージ写真（先輩Dr指導写真へ差し替え予定）
+            </span>
           </div>
-          <span class="fallback-badge hidden absolute bottom-2 right-2 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
-            ※イメージ写真（先輩Dr指導写真へ差し替え予定）
-          </span>
         </div>
-        <div class="p-6 sm:p-8 flex-grow flex flex-col">
-          <h3 class="text-xl sm:text-2xl font-black text-navy mb-3">
-            ② 院長・先輩Drによる個別指導
+
+        <div class="lg:col-span-5 lg:order-1 min-w-0">
+          <div class="relative mb-3">
+            <span class="font-en text-6xl sm:text-7xl font-extrabold text-mainblue/15 leading-none select-none block" aria-hidden="true">02</span>
+            <span class="font-en text-[11px] sm:text-xs font-extrabold tracking-[0.2em] text-brand uppercase block -mt-4 sm:-mt-5 relative z-10">
+              INDIVIDUAL MENTORING // 02
+            </span>
+          </div>
+          <h3 class="text-xl sm:text-2xl lg:text-[1.7rem] font-black text-navy leading-snug mb-4">
+            院長・先輩Drによる個別指導
           </h3>
-          <p class="text-sm text-navy/75 leading-relaxed mb-5">
+          <div class="w-10 h-0.5 bg-brand mb-5"></div>
+          <p class="text-sm text-navy/80 leading-relaxed mb-5">
             担当の先輩Drによる丁寧なレクチャーや、外科治療などの実践的な手技指導を実施。一人ひとりの習熟度や経験に合わせたアドバイスを受けられ、困ったときにはいつでも相談できる環境が整っています。
           </p>
-          <div class="mt-auto pt-4 border-t border-slate-200 space-y-2">
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy">
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">先輩Drレクチャー</span>
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">外科治療の手技指導</span>
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">月1回の院長1on1</span>
-            </div>
-            <p class="text-[11px] text-navy/60">※指導体制は個々の習熟度・希望に合わせて柔軟に調整しています。</p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy mb-2.5">
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">先輩Drレクチャー</span>
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">外科治療の手技指導</span>
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">月1回の院長1on1</span>
           </div>
+          <p class="text-[11px] text-navy/60">※指導体制は個々の習熟度・希望に合わせて柔軟に調整しています。</p>
         </div>
       </article>
 
-      <!-- ③ 症例検討・診療後の振り返り（重点訴求カード） -->
-      <article class="min-w-0 border-2 border-mainblue rounded-xl overflow-hidden bg-secblue/65 shadow-xs flex flex-col group reveal-up">
-        <div class="relative aspect-[16/10] overflow-hidden bg-secblue">
-          <img src="images/04.jpg"
-               data-fallback="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1000&q=85"
-               alt="③ 症例検討・診療後の振り返り"
-               class="w-full h-full object-cover photo-trust" loading="lazy">
-          <div class="absolute top-3 left-3 bg-mainblue text-white px-3.5 py-1.5 rounded-md font-en text-xs font-extrabold tracking-widest">
-            SUPPORT 03 / DAILY REVIEW &amp; CASE STUDY
+      <!-- 03 症例検討・診療後の振り返り（左：写真 ／ 右：テキスト） -->
+      <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center group reveal-up">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="relative overflow-hidden rounded-xl shadow-lg bg-secblue">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="images/04.jpg"
+                   data-fallback="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1100&q=85"
+                   alt="03 症例検討・診療後の振り返り"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+            <div class="absolute top-3 left-3 bg-brand text-white px-3 py-1 rounded text-[11px] font-bold shadow-xs">
+              疑問を翌日に持ち越さない
+            </div>
+            <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-navy/95 text-white px-4 py-2 font-en text-[10px] sm:text-xs font-bold tracking-[0.18em] uppercase shadow-md">
+              DAILY REVIEW // CASE STUDY &amp; DISCUSSION
+            </div>
+            <span class="fallback-badge hidden absolute top-3 right-3 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
+              ※イメージ写真（症例検討写真へ差し替え予定）
+            </span>
           </div>
-          <div class="absolute top-3 right-3 bg-brand text-white px-3 py-1 rounded-md text-[11px] font-bold">
-            疑問を翌日に持ち越さない
-          </div>
-          <span class="fallback-badge hidden absolute bottom-2 right-2 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
-            ※イメージ写真（症例検討写真へ差し替え予定）
-          </span>
         </div>
-        <div class="p-6 sm:p-8 flex-grow flex flex-col">
-          <h3 class="text-xl sm:text-2xl font-black text-navy mb-3">
-            ③ 症例検討・診療後の振り返り
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative mb-3">
+            <span class="font-en text-6xl sm:text-7xl font-extrabold text-mainblue/15 leading-none select-none block" aria-hidden="true">03</span>
+            <span class="font-en text-[11px] sm:text-xs font-extrabold tracking-[0.2em] text-brand uppercase block -mt-4 sm:-mt-5 relative z-10">
+              DAILY REVIEW &amp; CASE STUDY // 03
+            </span>
+          </div>
+          <h3 class="text-xl sm:text-2xl lg:text-[1.7rem] font-black text-navy leading-snug mb-4">
+            症例検討・診療後の振り返り
           </h3>
+          <div class="w-10 h-0.5 bg-brand mb-5"></div>
           <p class="text-sm text-navy/80 leading-relaxed mb-5">
             「その日の診療で生じた疑問を、その日のうちに解決する」ことを大切にしています。パノラマ・デンタルレントゲンや口腔内写真を用いた症例検討と診療内容のディスカッションを通じて、日々の不安を解消しながら臨床力を高めます。
           </p>
-          <div class="mt-auto pt-4 border-t border-mainblue/20 space-y-2">
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy">
-              <span class="bg-white border border-mainblue/30 rounded px-2.5 py-1">レントゲン・口腔内写真検討</span>
-              <span class="bg-white border border-mainblue/30 rounded px-2.5 py-1">診療内容ディスカッション</span>
-              <span class="bg-white border border-mainblue/30 rounded px-2.5 py-1">その日のうちの疑問解消</span>
-            </div>
-            <p class="text-[11px] text-navy/60">※振り返り・症例検討の現行実施頻度や時間帯については確認中です。</p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy mb-2.5">
+            <span class="bg-secblue border border-mainblue/30 rounded px-2.5 py-1">レントゲン・口腔内写真検討</span>
+            <span class="bg-secblue border border-mainblue/30 rounded px-2.5 py-1">診療内容ディスカッション</span>
+            <span class="bg-secblue border border-mainblue/30 rounded px-2.5 py-1">その日のうちの疑問解消</span>
           </div>
+          <p class="text-[11px] text-navy/60">※振り返り・症例検討の現行実施頻度や時間帯については確認中です。</p>
         </div>
       </article>
 
-      <!-- ④ 担当医制による主体的な診療経験 -->
-      <article class="min-w-0 border border-mainblue/25 rounded-xl overflow-hidden bg-white shadow-xs flex flex-col group reveal-up">
-        <div class="relative aspect-[16/10] overflow-hidden bg-secblue">
-          <img src="images/09.JPG"
-               data-fallback="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=85"
-               alt="④ 担当医制による主体的な診療経験"
-               class="w-full h-full object-cover photo-trust" loading="lazy">
-          <div class="absolute top-3 left-3 bg-navy text-white px-3.5 py-1.5 rounded-md font-en text-xs font-extrabold tracking-widest">
-            SUPPORT 04 / ASSIGNED DOCTOR SYSTEM
+      <!-- 04 担当医制による主体的な診療経験（左：テキスト ／ 右：写真） -->
+      <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center group reveal-up">
+        <div class="lg:col-span-7 lg:order-2 min-w-0">
+          <div class="relative overflow-hidden rounded-xl shadow-lg bg-secblue">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="images/09.JPG"
+                   data-fallback="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1100&q=85"
+                   alt="04 担当医制による主体的な診療経験"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+            <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-navy/95 text-white px-4 py-2 font-en text-[10px] sm:text-xs font-bold tracking-[0.18em] uppercase shadow-md">
+              ASSIGNED DOCTOR SYSTEM // AUTONOMOUS CARE
+            </div>
+            <span class="fallback-badge hidden absolute top-3 right-3 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
+              ※イメージ写真（診療風景写真へ差し替え予定）
+            </span>
           </div>
-          <span class="fallback-badge hidden absolute bottom-2 right-2 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
-            ※イメージ写真（診療風景写真へ差し替え予定）
-          </span>
         </div>
-        <div class="p-6 sm:p-8 flex-grow flex flex-col">
-          <h3 class="text-xl sm:text-2xl font-black text-navy mb-3">
-            ④ 担当医制による主体的な診療経験
+
+        <div class="lg:col-span-5 lg:order-1 min-w-0">
+          <div class="relative mb-3">
+            <span class="font-en text-6xl sm:text-7xl font-extrabold text-mainblue/15 leading-none select-none block" aria-hidden="true">04</span>
+            <span class="font-en text-[11px] sm:text-xs font-extrabold tracking-[0.2em] text-brand uppercase block -mt-4 sm:-mt-5 relative z-10">
+              ASSIGNED DOCTOR SYSTEM // 04
+            </span>
+          </div>
+          <h3 class="text-xl sm:text-2xl lg:text-[1.7rem] font-black text-navy leading-snug mb-4">
+            担当医制による主体的な診療経験
           </h3>
-          <p class="text-sm text-navy/75 leading-relaxed mb-5">
+          <div class="w-10 h-0.5 bg-brand mb-5"></div>
+          <p class="text-sm text-navy/80 leading-relaxed mb-5">
             治療計画の立案から実際の治療、その後の治療経過の確認まで、患者様を継続的に担当する経験を積めます。主体的に考えて診療を進めつつ、判断に迷ったときやサポートが必要なときは院長・先輩Drがすぐにフォローします。
           </p>
-          <div class="mt-auto pt-4 border-t border-slate-200 space-y-2">
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy">
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">治療計画の立案</span>
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">治療完了〜経過確認</span>
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">院長・先輩Drの随時フォロー</span>
-            </div>
-            <p class="text-[11px] text-navy/60">※担当医制の開始時期・運用基準は習熟度および現行運用を確認中です。</p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy mb-2.5">
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">治療計画の立案</span>
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">治療完了〜経過確認</span>
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">院長・先輩Drの随時フォロー</span>
           </div>
+          <p class="text-[11px] text-navy/60">※担当医制の開始時期・運用基準は習熟度および現行運用を確認中です。</p>
         </div>
       </article>
 
-      <!-- ⑤ 専門的な治療へのステップアップ -->
-      <article class="min-w-0 border border-mainblue/25 rounded-xl overflow-hidden bg-white shadow-xs flex flex-col group reveal-up">
-        <div class="relative aspect-[16/10] overflow-hidden bg-secblue">
-          <img src="images/15.JPG"
-               data-fallback="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"
-               alt="⑤ 専門的な治療へのステップアップ：インプラント・自費補綴・外科治療"
-               class="w-full h-full object-cover photo-trust" loading="lazy">
-          <div class="absolute top-3 left-3 bg-mainblue text-white px-3.5 py-1.5 rounded-md font-en text-xs font-extrabold tracking-widest">
-            SUPPORT 05 / SPECIALIZED CARE STEP-UP
+      <!-- 05 専門的な治療へのステップアップ（左：写真 ／ 右：テキスト） -->
+      <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center group reveal-up">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="relative overflow-hidden rounded-xl shadow-lg bg-secblue">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="images/15.JPG"
+                   data-fallback="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1100&q=85"
+                   alt="05 専門的な治療へのステップアップ：インプラント・自費補綴・外科治療"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+            <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-navy/95 text-white px-4 py-2 font-en text-[10px] sm:text-xs font-bold tracking-[0.18em] uppercase shadow-md">
+              SPECIALIZED CARE // IMPLANT &amp; SURGERY STEP-UP
+            </div>
+            <span class="fallback-badge hidden absolute top-3 right-3 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
+              ※イメージ写真（専門治療・オペ写真へ差し替え予定）
+            </span>
           </div>
-          <span class="fallback-badge hidden absolute bottom-2 right-2 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
-            ※イメージ写真（専門治療・オペ写真へ差し替え予定）
-          </span>
         </div>
-        <div class="p-6 sm:p-8 flex-grow flex flex-col">
-          <h3 class="text-xl sm:text-2xl font-black text-navy mb-3">
-            ⑤ 専門的な治療へのステップアップ
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative mb-3">
+            <span class="font-en text-6xl sm:text-7xl font-extrabold text-mainblue/15 leading-none select-none block" aria-hidden="true">05</span>
+            <span class="font-en text-[11px] sm:text-xs font-extrabold tracking-[0.2em] text-brand uppercase block -mt-4 sm:-mt-5 relative z-10">
+              SPECIALIZED CARE STEP-UP // 05
+            </span>
+          </div>
+          <h3 class="text-xl sm:text-2xl lg:text-[1.7rem] font-black text-navy leading-snug mb-4">
+            専門的な治療へのステップアップ
           </h3>
-          <p class="text-sm text-navy/75 leading-relaxed mb-5">
+          <div class="w-10 h-0.5 bg-brand mb-5"></div>
+          <p class="text-sm text-navy/80 leading-relaxed mb-5">
             一般歯科の基礎を固めたうえで、自費補綴・インプラント・外科治療・マウスピース矯正など専門的な治療へと段階的に診療の幅を広げられます。見学やアシスト、術前診断から一歩ずつステップを踏める環境です。
           </p>
-          <div class="mt-auto pt-4 border-t border-slate-200 space-y-2">
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy">
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">自費補綴</span>
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">インプラント</span>
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">外科治療・矯正領域</span>
-            </div>
-            <p class="text-[11px] text-navy/60">※インプラント・専門治療の具体的な担当範囲は現行運用を確認中です。</p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy mb-2.5">
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">自費補綴</span>
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">インプラント</span>
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">外科治療・矯正領域</span>
           </div>
+          <p class="text-[11px] text-navy/60">※インプラント・専門治療の具体的な担当範囲は現行運用を確認中です。</p>
         </div>
       </article>
 
-      <!-- ⑥ 外部研修・自己研鑽の支援 -->
-      <article class="min-w-0 border border-mainblue/25 rounded-xl overflow-hidden bg-white shadow-xs flex flex-col group reveal-up">
-        <div class="relative aspect-[16/10] overflow-hidden bg-secblue">
-          <img src="images/03.jpg"
-               data-fallback="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=85"
-               alt="⑥ 外部研修・自己研鑽の支援：セミナー・学会参加"
-               class="w-full h-full object-cover photo-trust" loading="lazy">
-          <div class="absolute top-3 left-3 bg-navy text-white px-3.5 py-1.5 rounded-md font-en text-xs font-extrabold tracking-widest">
-            SUPPORT 06 / SEMINAR &amp; SELF-DEVELOPMENT
+      <!-- 06 外部研修・自己研鑽の支援（左：テキスト ／ 右：写真） -->
+      <article class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center group reveal-up">
+        <div class="lg:col-span-7 lg:order-2 min-w-0">
+          <div class="relative overflow-hidden rounded-xl shadow-lg bg-secblue">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img src="images/03.jpg"
+                   data-fallback="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1100&q=85"
+                   alt="06 外部研修・自己研鑽の支援：セミナー・学会参加"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+            <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-navy/95 text-white px-4 py-2 font-en text-[10px] sm:text-xs font-bold tracking-[0.18em] uppercase shadow-md">
+              SEMINAR SUPPORT // CONTINUOUS SELF-DEVELOPMENT
+            </div>
+            <span class="fallback-badge hidden absolute top-3 right-3 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
+              ※イメージ写真（セミナー参加写真へ差し替え予定）
+            </span>
           </div>
-          <span class="fallback-badge hidden absolute bottom-2 right-2 bg-navy/85 text-white text-[10px] px-2.5 py-1 rounded">
-            ※イメージ写真（セミナー参加写真へ差し替え予定）
-          </span>
         </div>
-        <div class="p-6 sm:p-8 flex-grow flex flex-col">
-          <h3 class="text-xl sm:text-2xl font-black text-navy mb-3">
-            ⑥ 外部研修・自己研鑽の支援
+
+        <div class="lg:col-span-5 lg:order-1 min-w-0">
+          <div class="relative mb-3">
+            <span class="font-en text-6xl sm:text-7xl font-extrabold text-mainblue/15 leading-none select-none block" aria-hidden="true">06</span>
+            <span class="font-en text-[11px] sm:text-xs font-extrabold tracking-[0.2em] text-brand uppercase block -mt-4 sm:-mt-5 relative z-10">
+              SEMINAR &amp; SELF-DEVELOPMENT // 06
+            </span>
+          </div>
+          <h3 class="text-xl sm:text-2xl lg:text-[1.7rem] font-black text-navy leading-snug mb-4">
+            外部研修・自己研鑽の支援
           </h3>
-          <p class="text-sm text-navy/75 leading-relaxed mb-5">
+          <div class="w-10 h-0.5 bg-brand mb-5"></div>
+          <p class="text-sm text-navy/80 leading-relaxed mb-5">
             セミナー参加や学会参加、外部研修など、継続的な知識・技術の習得を積極的に支援しています。本人の学ぶ意欲や必要性に応じて、医院規定の補助に加えて費用を負担するケースもあり、自己成長を後押しします。
           </p>
-          <div class="mt-auto pt-4 border-t border-slate-200 space-y-2">
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy">
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">セミナー参加補助</span>
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">学会参加支援</span>
-              <span class="bg-subbg border border-mainblue/25 rounded px-2.5 py-1">外部研修サポート</span>
-            </div>
-            <p class="text-[11px] text-navy/60">※セミナー補助の最新金額・負担割合の現行運用は確認中です（下記表は既存規定）。</p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-navy mb-2.5">
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">セミナー参加補助</span>
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">学会参加支援</span>
+            <span class="bg-white border border-mainblue/25 rounded px-2.5 py-1">外部研修サポート</span>
           </div>
+          <p class="text-[11px] text-navy/60">※セミナー補助の最新金額・負担割合の現行運用は確認中です（下記表は既存規定）。</p>
         </div>
       </article>
 
