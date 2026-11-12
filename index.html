@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://www.nakamura-sika.net/recruit/_share/ogp.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- Google Fonts: 洗練された医療の信頼感を表現するフォント構成 -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
   }
 </script>
 
-<!-- GSAP (上質な出現アニメーション) -->
+<!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -50,7 +50,6 @@
   :root {
     --navy: #0B132B;
     --medical: #0284C7;
-    --line-color: #E2E8F0;
   }
 
   body {
@@ -60,7 +59,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Analog Grain Texture（デジタル臭さを消す微細な質感オーバーレイ） */
+  /* 微細なアナログノイズ質感オーバーレイ */
   .grain-overlay {
     position: fixed;
     inset: 0;
@@ -79,7 +78,7 @@
     transform: scale(1.03);
   }
 
-  /* エッジの効いたシャープなボタン（無意味なグラデーション排除） */
+  /* エッジの効いたシャープなボタン */
   .btn-solid-medical {
     background-color: #0284C7;
     color: #FFFFFF;
@@ -169,7 +168,7 @@
     transform: translateX(0);
   }
 
-  /* アコーディオン（FAQ / 給与詳細） */
+  /* アコーディオン */
   details > summary {
     list-style: none;
   }
@@ -177,7 +176,7 @@
     display: none;
   }
 
-  /* 働き方診断：ステップ遷移アニメーションと選択カード状態 */
+  /* 働き方診断アニメーションと選択状態 */
   @keyframes diagFadeSlide {
     from {
       opacity: 0;
@@ -205,7 +204,16 @@
     border-color: #0284C7;
   }
 
-  /* プレビュー環境でも要素が確実に表示されるよう初期opacityは1に設定 */
+  /* ロードマップ（一本の道）の破線アニメーション */
+  @keyframes roadDashMove {
+    to {
+      stroke-dashoffset: -48;
+    }
+  }
+  .road-center-line {
+    animation: roadDashMove 2.2s linear infinite;
+  }
+
   .reveal-up {
     opacity: 1;
   }
@@ -254,7 +262,7 @@
 <div class="grain-overlay" aria-hidden="true"></div>
 
 <!-- =========================================================
-     HEADER（PCフルブリード・洗練されたメディカルネイビー仕様）
+     HEADER
      ========================================================= -->
 <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
   <div class="bg-navy text-white py-1.5 hidden md:block">
@@ -264,7 +272,7 @@
         <a href="#workstyle" class="hover:text-sky-300 transition-colors">週5日・週4日勤務</a>
         <a href="#diagnosis" class="hover:text-sky-300 transition-colors">働き方診断</a>
         <a href="#salary" class="hover:text-sky-300 transition-colors">給与・待遇</a>
-        <a href="#education" class="hover:text-sky-300 transition-colors">教育・研修</a>
+        <a href="#education" class="hover:text-sky-300 transition-colors">3年間の成長ロード</a>
         <a href="#graduate" class="text-sky-300 font-bold hover:underline">大学院生アルバイト募集 ›</a>
       </div>
     </div>
@@ -382,7 +390,7 @@
     <a href="#workstyle" class="sp-nav-link block px-6 py-4 border-b border-slate-100">週5日・週4日勤務スタイル</a>
     <a href="#diagnosis" class="sp-nav-link block px-6 py-4 border-b border-slate-100 text-medical">あなたに合った働き方診断</a>
     <a href="#salary" class="sp-nav-link block px-6 py-4 border-b border-slate-100">給与・待遇</a>
-    <a href="#education" class="sp-nav-link block px-6 py-4 border-b border-slate-100">教育・3年間の成長イメージ</a>
+    <a href="#education" class="sp-nav-link block px-6 py-4 border-b border-slate-100">3年間の成長ロードマップ</a>
     <a href="#career" class="sp-nav-link block px-6 py-4 border-b border-slate-100">キャリアパス（一般・インプラント・矯正）</a>
     <a href="#graduate" class="sp-nav-link block px-6 py-4 border-b border-slate-100 bg-sky-50 text-medical">大学院生アルバイト募集 ›</a>
     <a href="#req" class="sp-nav-link block px-6 py-4 border-b border-slate-100">募集要項</a>
@@ -398,12 +406,12 @@
 <main>
 
 <!-- =========================================================
-     01. FIRST VIEW（フルブリード・非対称・写真主導の圧倒的ファーストビュー）
+     01. FIRST VIEW
      ========================================================= -->
 <section class="relative w-full bg-white border-b border-slate-200 overflow-hidden">
   <div class="w-full grid lg:grid-cols-12 min-h-[calc(100vh-110px)]">
     
-    <!-- 左側 6カラム：洗練されたタイポグラフィとコアバリュー -->
+    <!-- 左側 6カラム -->
     <div class="lg:col-span-6 flex flex-col justify-between px-6 sm:px-10 lg:px-14 xl:px-20 py-12 lg:py-16 bg-white z-10">
       <div>
         <div class="inline-flex items-center gap-3 mb-7">
@@ -422,7 +430,7 @@
           自分に合った働き方で、歯科医師としての未来を築く。
         </p>
 
-        <!-- ターゲットが最も重視する3軸（休日・給与・教育）の視覚インデックス -->
+        <!-- 3軸インデックス -->
         <div class="grid grid-cols-3 border-y border-slate-200 divide-x divide-slate-200 mb-9">
           <a href="#workstyle" class="py-4 pr-3 hover:bg-slate-50 transition-colors group">
             <span class="block font-en text-[11px] font-bold text-medical tracking-wider mb-1">01 WORK STYLE</span>
@@ -434,7 +442,7 @@
           </a>
           <a href="#education" class="py-4 pl-3 sm:pl-4 hover:bg-slate-50 transition-colors group">
             <span class="block font-en text-[11px] font-bold text-medical tracking-wider mb-1">03 EDUCATION</span>
-            <span class="block text-sm sm:text-base font-black text-navy group-hover:text-medical transition-colors">担当Dr指導<br class="sm:hidden">＆段階的研修</span>
+            <span class="block text-sm sm:text-base font-black text-navy group-hover:text-medical transition-colors">担当Dr指導<br class="sm:hidden">＆3年ロード</span>
           </a>
         </div>
 
@@ -450,7 +458,6 @@
         </div>
       </div>
 
-      <!-- 大学院生アルバイト募集へのスマート導線 -->
       <div class="mt-10 pt-5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs">
         <span class="text-slate-500 font-medium">※本ページは卒後2年目以上の常勤募集です</span>
         <a href="#graduate" class="font-bold text-navy hover:text-medical underline underline-offset-4">
@@ -459,7 +466,7 @@
       </div>
     </div>
 
-    <!-- 右側 6カラム：フルブリード大型ビジュアル＆医院スケールオーバーレイ -->
+    <!-- 右側 6カラム -->
     <div class="lg:col-span-6 relative min-h-[380px] sm:min-h-[480px] lg:min-h-full bg-navy overflow-hidden group">
       <img src="images/02.JPG"
            data-fallback="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85"
@@ -467,7 +474,6 @@
            class="absolute inset-0 w-full h-full object-cover photo-trust" loading="eager">
       <div class="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent"></div>
 
-      <!-- 写真下部：直感でスケールが伝わる数字インデックス -->
       <div class="absolute bottom-0 inset-x-0 p-6 sm:p-10 text-white">
         <p class="font-en text-xs tracking-[0.2em] text-sky-300 font-bold mb-3 uppercase">CLINIC SCALE &amp; SUPPORT</p>
         <div class="grid grid-cols-4 gap-3 sm:gap-6 border-t border-white/25 pt-4">
@@ -494,7 +500,7 @@
 </section>
 
 <!-- =========================================================
-     02. REAL SCENE PHOTO STRIP（文章の前に写真で空気感を直感伝達）
+     02. REAL SCENE PHOTO STRIP
      ========================================================= -->
 <section class="w-full bg-navy py-12 px-4 sm:px-6 lg:px-12 text-white">
   <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-2">
@@ -545,113 +551,152 @@
 </section>
 
 <!-- =========================================================
-     03. WORK STYLE（週5日勤務 vs 週4日勤務の視覚比較・最重点セクション）
+     03. WORK STYLE（ガリガリ臨床集中「5 DAYS」 vs 余暇充実「4 DAYS」視覚比較）
      ========================================================= -->
 <section id="workstyle" class="w-full py-20 lg:py-28 px-4 sm:px-6 lg:px-12 bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto">
     <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6 reveal-up">
       <div>
-        <span class="font-en text-xs font-extrabold tracking-[0.2em] text-medical uppercase">01 / WORK STYLE</span>
+        <span class="font-en text-xs font-extrabold tracking-[0.2em] text-medical uppercase">01 / WORK STYLE COMPARISON</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-navy mt-2 leading-tight">
-          週5日も、週4日も。<br>
-          どちらも「成長できる」正社員の選択肢。
+          ガリガリ臨床を積む「週5日」か、<br>
+          余暇も大切にする「週4日」か。
         </h2>
       </div>
       <p class="text-sm sm:text-base text-slate-600 max-w-md leading-relaxed">
-        勤務日数によって成長の機会を制限することはありません。あなたの価値観やライフスタイルに合わせて、無理なく長く続けられるスタイルを選べます。
+        勤務日数によって成長の機会を制限することはありません。臨床に打ち込みたい方も、自分の時間をゆったり楽しみたい方も、どちらも対等な正社員キャリアとして選べます。
       </p>
     </div>
 
-    <!-- 週5日 vs 週4日 対等ビジュアル比較カード -->
-    <div class="grid lg:grid-cols-2 gap-8 mb-14">
+    <!-- 視覚比較ビジュアルボード（5 DAYS vs 4 DAYS メガタイポ＆ライフスタイル図解） -->
+    <div class="grid lg:grid-cols-2 border-2 border-navy mb-14 reveal-up">
       
-      <!-- ① 週5日勤務（メディカルブルー基調） -->
-      <div class="border-2 border-medical bg-sky-50/40 flex flex-col reveal-up">
-        <div class="relative overflow-hidden aspect-[16/9]">
-          <img src="images/08.jpg"
-               data-fallback="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85"
-               alt="週5日勤務：先輩ドクターと診療・研修に取り組む姿"
-               class="w-full h-full object-cover photo-trust" loading="lazy">
-          <div class="absolute top-0 left-0 bg-medical text-white px-5 py-2.5 text-xs font-bold tracking-wider">
-            STYLE A｜週休2日制
-          </div>
+      <!-- LEFT: 5 DAYS（臨床集中・アクティブ成長スタイル） -->
+      <div class="bg-navy text-white flex flex-col border-b-2 lg:border-b-0 lg:border-r-2 border-navy relative overflow-hidden group">
+        <!-- トップラベル -->
+        <div class="bg-medical px-6 py-3 flex items-center justify-between">
+          <span class="text-xs sm:text-sm font-black tracking-wider">【週5日勤務｜臨床にしっかり向き合う】</span>
+          <span class="font-en text-xs font-extrabold tracking-widest bg-navy/30 px-2.5 py-0.5">ACTIVE CLINICAL</span>
         </div>
 
-        <div class="p-7 md:p-9 flex-grow flex flex-col">
-          <h3 class="text-2xl md:text-3xl font-black text-navy mb-4">
-            週5日勤務｜臨床にしっかり向き合う
+        <!-- ビジュアル＆メガタイポグラフィ複合エリア -->
+        <div class="p-6 sm:p-8 lg:p-10 flex-grow flex flex-col">
+          <div class="relative aspect-[16/10] overflow-hidden mb-6 border border-white/15">
+            <img src="images/08.jpg"
+                 data-fallback="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85"
+                 alt="週5日勤務：先輩ドクターと症例・診療に熱中する姿"
+                 class="w-full h-full object-cover photo-trust" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/25 to-transparent"></div>
+            <!-- 5 DAYS メガタイポオーバーレイ -->
+            <div class="absolute bottom-3 left-5 right-5 flex items-end justify-between">
+              <div class="font-en font-extrabold leading-none tracking-tighter">
+                <span class="text-6xl sm:text-7xl xl:text-8xl text-white">5</span>
+                <span class="text-2xl sm:text-3xl text-sky-400 ml-1">DAYS</span>
+              </div>
+              <span class="text-xs font-bold bg-medical text-white px-3 py-1.5">週休2日制｜総支給 50.5万円〜</span>
+            </div>
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-black text-white mb-3">
+            症例数と実践経験を重ね、臨床力を一気に引き上げる。
           </h3>
-          <p class="text-sm md:text-base text-slate-600 leading-relaxed mb-6">
-            基礎から幅広く学び、診療経験を積み重ねたい方へ。日々の診療を通じて技術を磨き、インプラントなどの専門的な分野にも積極的に挑戦したい先生におすすめの働き方です。
+          <p class="text-sm text-slate-300 leading-relaxed mb-6">
+            「若いうちに現場でどんどん経験を積みたい」「インプラントや外科にも積極的に挑戦したい」という先生に最適。日々の診療と先輩Drのフィードバックで、確かな技術が身につきます。
           </p>
 
-          <!-- 1週間のリズム図解（メディカルブルー） -->
-          <div class="bg-white border border-sky-200 p-4 mb-6">
-            <span class="block text-[11px] font-bold text-slate-500 mb-2">1週間の勤務リズム（シフト制・日祝休み）</span>
-            <svg viewBox="0 0 420 44" class="w-full h-auto" role="img" aria-label="週5日勤務・週休2日のスケジュール図">
-              <rect x="0" y="4" width="54" height="36" fill="#0284C7"/><text x="27" y="26" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
-              <rect x="61" y="4" width="54" height="36" fill="#0284C7"/><text x="88" y="26" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
-              <rect x="122" y="4" width="54" height="36" fill="#0284C7"/><text x="149" y="26" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
-              <rect x="183" y="4" width="54" height="36" fill="#0284C7"/><text x="210" y="26" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
-              <rect x="244" y="4" width="54" height="36" fill="#0284C7"/><text x="271" y="26" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
-              <rect x="305" y="4" width="54" height="36" fill="#E0F2FE" stroke="#0284C7"/><text x="332" y="26" fill="#0369A1" font-size="11" font-weight="bold" text-anchor="middle">休日</text>
-              <rect x="366" y="4" width="54" height="36" fill="#E0F2FE" stroke="#0284C7"/><text x="393" y="26" fill="#0369A1" font-size="11" font-weight="bold" text-anchor="middle">休日</text>
+          <!-- 1週間の働き方ビジュアルメーター（5日診療・2日休日） -->
+          <div class="bg-navy-light border border-slate-700 p-4 mb-6">
+            <div class="flex justify-between items-center text-[11px] font-bold mb-2">
+              <span class="text-sky-300">1週間のリズム：診療 5日 ／ 休日 2日</span>
+              <span class="font-en text-slate-300">ON 71% : OFF 29%</span>
+            </div>
+            <svg viewBox="0 0 420 40" class="w-full h-auto" role="img" aria-label="週5日勤務・週休2日のリズム図解">
+              <rect x="0" y="2" width="54" height="36" fill="#0284C7"/><text x="27" y="24" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
+              <rect x="61" y="2" width="54" height="36" fill="#0284C7"/><text x="88" y="24" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
+              <rect x="122" y="2" width="54" height="36" fill="#0284C7"/><text x="149" y="24" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
+              <rect x="183" y="2" width="54" height="36" fill="#0284C7"/><text x="210" y="24" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
+              <rect x="244" y="2" width="54" height="36" fill="#0284C7"/><text x="271" y="24" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
+              <rect x="305" y="2" width="54" height="36" fill="#1E293B" stroke="#38BDF8"/><text x="332" y="24" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">休日</text>
+              <rect x="366" y="2" width="54" height="36" fill="#1E293B" stroke="#38BDF8"/><text x="393" y="24" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">休日</text>
             </svg>
           </div>
 
-          <div class="mt-auto pt-4 border-t border-sky-200/80">
-            <span class="block text-xs font-bold text-medical mb-2">こんな先生におすすめ</span>
-            <ul class="text-sm font-bold text-navy space-y-1.5">
-              <li>・診療経験を豊富に積み重ねたい</li>
-              <li>・インプラントなど専門分野にも挑戦したい</li>
-              <li>・セミナーや練習にも積極的に取り組みたい</li>
-            </ul>
-          </div>
+          <ul class="mt-auto pt-4 border-t border-slate-700 text-xs sm:text-sm font-bold text-sky-200 space-y-1.5">
+            <li>・診療経験を豊富に積み重ね、できる治療を増やしたい</li>
+            <li>・インプラントや専門分野にも積極的に挑戦したい</li>
+            <li>・セミナーや実習にも意欲的に取り組みたい</li>
+          </ul>
         </div>
       </div>
 
-      <!-- ② 週4日勤務（メディカルティール基調） -->
-      <div class="border-2 border-teal-600 bg-teal-50/40 flex flex-col reveal-up">
-        <div class="relative overflow-hidden aspect-[16/9]">
-          <img src="images/19.JPG"
-               data-fallback="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
-               alt="週4日勤務：休日に趣味や旅行などプライベートを楽しむイメージ"
-               class="w-full h-full object-cover photo-trust" loading="lazy">
-          <div class="absolute top-0 left-0 bg-teal-600 text-white px-5 py-2.5 text-xs font-bold tracking-wider">
-            STYLE B｜週休3日制
-          </div>
+      <!-- RIGHT: 4 DAYS（余暇充実・ゆとりライフスタイル） -->
+      <div class="bg-slatebg text-navy flex flex-col relative overflow-hidden group">
+        <!-- トップラベル -->
+        <div class="bg-teal-600 text-white px-6 py-3 flex items-center justify-between">
+          <span class="text-xs sm:text-sm font-black tracking-wider">【週4日勤務｜仕事もプライベートも充実】</span>
+          <span class="font-en text-xs font-extrabold tracking-widest bg-navy/25 px-2.5 py-0.5">LIFE &amp; BALANCE</span>
         </div>
 
-        <div class="p-7 md:p-9 flex-grow flex flex-col">
-          <h3 class="text-2xl md:text-3xl font-black text-navy mb-4">
-            週4日勤務｜仕事もプライベートも充実
+        <!-- ビジュアル＆メガタイポグラフィ複合エリア -->
+        <div class="p-6 sm:p-8 lg:p-10 flex-grow flex flex-col">
+          <!-- 余暇の広がりを伝える2面フォトコラージュ -->
+          <div class="relative aspect-[16/10] overflow-hidden mb-6 border border-slate-300 grid grid-cols-12 gap-1 bg-white">
+            <div class="col-span-7 h-full overflow-hidden relative">
+              <img src="images/19.JPG"
+                   data-fallback="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=85"
+                   alt="週4日勤務：瀬戸内の海やカフェでゆったり過ごす休日イメージ"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+            <div class="col-span-5 h-full grid grid-rows-2 gap-1 overflow-hidden">
+              <img src="images/18.JPG"
+                   data-fallback="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=85"
+                   alt="サイクリングや趣味を楽しむ休日"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+              <img src="images/07.jpg"
+                   data-fallback="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=85"
+                   alt="カフェや旅行でリフレッシュする時間"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent pointer-events-none"></div>
+            <!-- 4 DAYS メガタイポオーバーレイ -->
+            <div class="absolute bottom-3 left-5 right-5 flex items-end justify-between">
+              <div class="font-en font-extrabold leading-none tracking-tighter">
+                <span class="text-6xl sm:text-7xl xl:text-8xl text-navy">4</span>
+                <span class="text-2xl sm:text-3xl text-teal-600 ml-1">DAYS</span>
+              </div>
+              <span class="text-xs font-bold bg-teal-600 text-white px-3 py-1.5">週休3日制｜総支給 40.0万円〜</span>
+            </div>
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-black text-navy mb-3">
+            週休3日のゆとりを持ち、余暇も大切にしながら着実に成長。
           </h3>
-          <p class="text-sm md:text-base text-slate-600 leading-relaxed mb-6">
-            仕事だけでなく、自分の時間も大切にしたい方へ。趣味や習い事、旅行など、プライベートも充実させながら、歯科医師として長く働き続けられる勤務スタイルです。
+          <p class="text-sm text-slate-600 leading-relaxed mb-6">
+            「旅行や趣味、習い事の時間も大切にしたい」「心身にゆとりを持って長く働き続けたい」という先生に最適。週4日でも教育カリキュラム・担当Drの指導は変わらず受けられます。
           </p>
 
-          <!-- 1週間のリズム図解（メディカルティール） -->
+          <!-- 1週間の働き方ビジュアルメーター（4日診療・3日休日） -->
           <div class="bg-white border border-teal-200 p-4 mb-6">
-            <span class="block text-[11px] font-bold text-slate-500 mb-2">1週間の勤務リズム（週休3日・自分の時間も確保）</span>
-            <svg viewBox="0 0 420 44" class="w-full h-auto" role="img" aria-label="週4日勤務・週休3日のスケジュール図">
-              <rect x="0" y="4" width="54" height="36" fill="#0D9488"/><text x="27" y="26" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
-              <rect x="61" y="4" width="54" height="36" fill="#0D9488"/><text x="88" y="26" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
-              <rect x="122" y="4" width="54" height="36" fill="#CCFBF1" stroke="#0D9488"/><text x="149" y="26" fill="#0F766E" font-size="11" font-weight="bold" text-anchor="middle">休日</text>
-              <rect x="183" y="4" width="54" height="36" fill="#0D9488"/><text x="210" y="26" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
-              <rect x="244" y="4" width="54" height="36" fill="#0D9488"/><text x="271" y="26" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
-              <rect x="305" y="4" width="54" height="36" fill="#CCFBF1" stroke="#0D9488"/><text x="332" y="26" fill="#0F766E" font-size="11" font-weight="bold" text-anchor="middle">休日</text>
-              <rect x="366" y="4" width="54" height="36" fill="#CCFBF1" stroke="#0D9488"/><text x="393" y="26" fill="#0F766E" font-size="11" font-weight="bold" text-anchor="middle">休日</text>
+            <div class="flex justify-between items-center text-[11px] font-bold mb-2">
+              <span class="text-teal-700">1週間のリズム：診療 4日 ／ 休日 3日</span>
+              <span class="font-en text-slate-500">ON 57% : OFF 43%</span>
+            </div>
+            <svg viewBox="0 0 420 40" class="w-full h-auto" role="img" aria-label="週4日勤務・週休3日のリズム図解">
+              <rect x="0" y="2" width="54" height="36" fill="#0D9488"/><text x="27" y="24" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
+              <rect x="61" y="2" width="54" height="36" fill="#0D9488"/><text x="88" y="24" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
+              <rect x="122" y="2" width="54" height="36" fill="#CCFBF1" stroke="#0D9488"/><text x="149" y="24" fill="#0F766E" font-size="11" font-weight="bold" text-anchor="middle">休日</text>
+              <rect x="183" y="2" width="54" height="36" fill="#0D9488"/><text x="210" y="24" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
+              <rect x="244" y="2" width="54" height="36" fill="#0D9488"/><text x="271" y="24" fill="#FFF" font-size="11" font-weight="bold" text-anchor="middle">診療</text>
+              <rect x="305" y="2" width="54" height="36" fill="#CCFBF1" stroke="#0D9488"/><text x="332" y="24" fill="#0F766E" font-size="11" font-weight="bold" text-anchor="middle">休日</text>
+              <rect x="366" y="2" width="54" height="36" fill="#CCFBF1" stroke="#0D9488"/><text x="393" y="24" fill="#0F766E" font-size="11" font-weight="bold" text-anchor="middle">休日</text>
             </svg>
           </div>
 
-          <div class="mt-auto pt-4 border-t border-teal-200/80">
-            <span class="block text-xs font-bold text-teal-700 mb-2">こんな先生におすすめ</span>
-            <ul class="text-sm font-bold text-navy space-y-1.5">
-              <li>・趣味や習い事、旅行を思いきり楽しみたい</li>
-              <li>・週3日の休日をしっかり確保したい</li>
-              <li>・自分のペースで無理なく長く働き続けたい</li>
-            </ul>
-          </div>
+          <ul class="mt-auto pt-4 border-t border-slate-200 text-xs sm:text-sm font-bold text-teal-800 space-y-1.5">
+            <li>・趣味や習い事、旅行などプライベートの時間も思いきり楽しみたい</li>
+            <li>・週3日の休日をしっかり確保し、自分のペースで学びたい</li>
+            <li>・無理なく長く歯科医師として活躍し続けたい</li>
+          </ul>
         </div>
       </div>
 
@@ -679,7 +724,7 @@
 </section>
 
 <!-- =========================================================
-     04. INTERACTIVE DIAGNOSIS（新規コンテンツ：あなたに合った働き方は？）
+     04. INTERACTIVE DIAGNOSIS（あなたに合った働き方は？全5問）
      ========================================================= -->
 <section id="diagnosis" class="w-full py-20 lg:py-28 px-4 sm:px-6 lg:px-12 bg-slatebg border-b border-slate-200">
   <div class="max-w-5xl mx-auto">
@@ -693,22 +738,21 @@
     </div>
 
     <div id="diagnosis-app" class="bg-white border-2 border-navy shadow-sm reveal-up overflow-hidden">
-      <!-- ヘッダーバー：QUESTION 1/5 表示＆進捗バー -->
+      <!-- ヘッダーバー -->
       <div class="bg-navy text-white px-6 sm:px-10 pt-5 pb-4">
         <div class="flex items-center justify-between gap-4 mb-3">
           <div class="flex items-center gap-3">
             <span id="diag-step-label" class="font-en text-xs sm:text-sm font-extrabold tracking-[0.18em] text-sky-300">QUESTION 1/5</span>
-            <span id="diag-step-category" class="text-[11px] font-bold text-slate-300 border-l border-slate-700 pl-3">価値観チェック</span>
+            <span id="diag-step-category" class="text-[11px] font-bold text-slate-300 border-l border-slate-700 pl-3">仕事で大切にしたい軸</span>
           </div>
           <span id="diag-percent-label" class="font-en text-xs font-bold text-slate-300">20%</span>
         </div>
-        <!-- 進捗バー（プログレスバー） -->
         <div class="w-full h-1.5 bg-slate-800 overflow-hidden" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" id="diag-progress-container">
           <div id="diag-progress-bar" class="h-full bg-medical transition-all duration-500 ease-out" style="width: 20%;"></div>
         </div>
       </div>
 
-      <!-- 質問エリア（1画面ずつ表示） -->
+      <!-- 質問エリア -->
       <div id="diag-question-area" class="p-6 sm:p-10 lg:p-12">
         <div id="diag-question-card" class="diag-animate-in">
           <h3 id="diag-question-text" class="text-xl sm:text-2xl lg:text-3xl font-black text-navy mb-8 leading-snug">
@@ -716,11 +760,33 @@
           </h3>
 
           <div id="diag-options" class="space-y-4">
-            <!-- JSで3択カードを動的生成 -->
+            <button type="button" onclick="window.handleDiagSelect && window.handleDiagSelect('A')" class="diag-option-card w-full text-left p-4 sm:p-5 border-2 border-slate-200 bg-white hover:border-medical hover:bg-slate-50 flex items-center justify-between gap-4 group">
+              <div class="flex items-center gap-3.5 sm:gap-4">
+                <span class="diag-badge w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 border border-slate-300 text-navy group-hover:border-medical group-hover:text-medical font-en text-xs sm:text-sm font-extrabold flex items-center justify-center transition-colors">A</span>
+                <span class="text-sm sm:text-base font-bold text-navy leading-snug">臨床経験を積み、歯科医師として成長すること</span>
+              </div>
+              <span class="font-en text-base sm:text-lg text-slate-400 group-hover:text-medical group-hover:translate-x-1 transition-all flex-shrink-0">→</span>
+            </button>
+
+            <button type="button" onclick="window.handleDiagSelect && window.handleDiagSelect('B')" class="diag-option-card w-full text-left p-4 sm:p-5 border-2 border-slate-200 bg-white hover:border-medical hover:bg-slate-50 flex items-center justify-between gap-4 group">
+              <div class="flex items-center gap-3.5 sm:gap-4">
+                <span class="diag-badge w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 border border-slate-300 text-navy group-hover:border-medical group-hover:text-medical font-en text-xs sm:text-sm font-extrabold flex items-center justify-center transition-colors">B</span>
+                <span class="text-sm sm:text-base font-bold text-navy leading-snug">仕事とプライベートを両立すること</span>
+              </div>
+              <span class="font-en text-base sm:text-lg text-slate-400 group-hover:text-medical group-hover:translate-x-1 transition-all flex-shrink-0">→</span>
+            </button>
+
+            <button type="button" onclick="window.handleDiagSelect && window.handleDiagSelect('C')" class="diag-option-card w-full text-left p-4 sm:p-5 border-2 border-slate-200 bg-white hover:border-medical hover:bg-slate-50 flex items-center justify-between gap-4 group">
+              <div class="flex items-center gap-3.5 sm:gap-4">
+                <span class="diag-badge w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 border border-slate-300 text-navy group-hover:border-medical group-hover:text-medical font-en text-xs sm:text-sm font-extrabold flex items-center justify-center transition-colors">C</span>
+                <span class="text-sm sm:text-base font-bold text-navy leading-snug">どちらも大切にすること</span>
+              </div>
+              <span class="font-en text-base sm:text-lg text-slate-400 group-hover:text-medical group-hover:translate-x-1 transition-all flex-shrink-0">→</span>
+            </button>
           </div>
         </div>
 
-        <!-- ナビゲーションフッター（「戻る」ボタン＆回答状況ドット） -->
+        <!-- ナビゲーションフッター -->
         <div class="mt-8 pt-6 border-t border-slate-200 flex items-center justify-between gap-4">
           <button id="diag-prev-btn" type="button" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-500 hover:text-navy transition-colors py-2 px-3 border border-transparent hover:border-slate-300 disabled:opacity-0 disabled:pointer-events-none">
             <span class="font-en">←</span>
@@ -737,9 +803,8 @@
         </div>
       </div>
 
-      <!-- 診断結果エリア（初期非表示・写真主体のリッチレイアウト） -->
+      <!-- 診断結果エリア -->
       <div id="diag-result-area" class="hidden diag-animate-in">
-        <!-- 上部：大型ビジュアル写真 ＋ タイプ名・おすすめ勤務スタイル -->
         <div class="grid lg:grid-cols-12 border-b border-slate-200">
           <div class="lg:col-span-5 relative min-h-[260px] sm:min-h-[320px] bg-navy overflow-hidden">
             <img id="diag-result-img"
@@ -767,15 +832,11 @@
               <span id="diag-result-style" class="text-lg sm:text-xl font-black text-navy">おすすめの働き方：週5日勤務</span>
             </div>
 
-            <p id="diag-result-desc" class="text-sm sm:text-base text-slate-700 leading-relaxed">
-              <!-- JSで結果メッセージを挿入 -->
-            </p>
+            <p id="diag-result-desc" class="text-sm sm:text-base text-slate-700 leading-relaxed"></p>
           </div>
         </div>
 
-        <!-- 中部：医院で実現できる働き方 ＆ Q3（学びの方向性）パーソナライズ紹介 -->
         <div class="p-6 sm:p-10 bg-slatebg border-b border-slate-200 grid md:grid-cols-2 gap-6">
-          <!-- なかむら歯科クリニックで実現できる働き方 -->
           <div class="bg-white border border-slate-200 p-6">
             <span class="font-en text-[11px] font-extrabold tracking-widest text-medical uppercase">AT NAKAMURA DENTAL CLINIC</span>
             <h4 class="text-base sm:text-lg font-black text-navy mt-1 mb-3">当院で実現できる働き方</h4>
@@ -783,7 +844,6 @@
             <ul id="diag-result-clinic-bullets" class="text-xs sm:text-sm font-bold text-navy space-y-1.5 border-t border-slate-100 pt-3"></ul>
           </div>
 
-          <!-- 質問3の回答を反映した「興味を持っている学びの方向性」 -->
           <div class="bg-white border-2 border-navy p-6">
             <span class="font-en text-[11px] font-extrabold tracking-widest text-medical uppercase">YOUR LEARNING FOCUS（Q3の回答より）</span>
             <h4 id="diag-result-learning-title" class="text-base sm:text-lg font-black text-navy mt-1 mb-3"></h4>
@@ -795,7 +855,6 @@
           </div>
         </div>
 
-        <!-- 下部：募集要項リンク・見学CTA・「もう一度診断する」ボタン -->
         <div class="p-6 sm:p-8 bg-white flex flex-col lg:flex-row items-center justify-between gap-5">
           <div class="flex flex-wrap items-center gap-4">
             <button id="diag-reset-btn" type="button" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 hover:text-navy border border-slate-300 hover:border-navy px-4 py-2.5 transition-colors">
@@ -824,13 +883,12 @@
 </section>
 
 <!-- =========================================================
-     05. SALARY & TREATMENT（固定給の安心感・アコーディオン仕様・誠実な残業説明）
+     05. SALARY & TREATMENT
      ========================================================= -->
 <section id="salary" class="w-full py-20 lg:py-28 px-4 sm:px-6 lg:px-12 bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto">
     <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
       
-      <!-- 左側 5カラム：固定給ベースの安心感メッセージ -->
       <div class="lg:col-span-5 reveal-up">
         <span class="font-en text-xs font-extrabold tracking-[0.2em] text-medical uppercase">02 / SALARY &amp; STABILITY</span>
         <h2 class="text-3xl sm:text-4xl font-black text-navy mt-2 mb-6 leading-tight">
@@ -841,7 +899,6 @@
           若手のうちは、技術や経験を積むことが何より大切な時期。だからこそ、当院では安定した固定給をベースに、安心して臨床に取り組める給与体系を整えています。
         </p>
 
-        <!-- ハイライト数値ボックス -->
         <div class="bg-navy text-white p-7 mb-6">
           <span class="block text-xs font-bold text-sky-300 mb-1">週5日勤務（常勤・卒後2年目）総支給額</span>
           <div class="font-en text-4xl sm:text-5xl font-extrabold tracking-tight">
@@ -852,7 +909,6 @@
           </p>
         </div>
 
-        <!-- 想定年収例（週5常勤） -->
         <div class="border border-slate-200 bg-slatebg p-6">
           <h3 class="text-sm font-black text-navy mb-3">想定年収の例（週5日勤務・常勤）</h3>
           <div class="grid grid-cols-5 gap-1 text-center bg-white border border-slate-200 divide-x divide-slate-200">
@@ -868,10 +924,9 @@
         </div>
       </div>
 
-      <!-- 右側 7カラム：給与テーブル（①・②ともにアコーディオンボックス化）＆固定残業代の丁寧な説明 -->
       <div class="lg:col-span-7 space-y-5 reveal-up">
         
-        <!-- ① 週5日勤務の給与モデル（アコーディオン） -->
+        <!-- ① 週5日勤務の給与モデル -->
         <details class="group bg-white border border-slate-200 hover:border-medical transition-colors">
           <summary class="cursor-pointer p-6 md:p-7 flex items-center justify-between gap-4 select-none">
             <div>
@@ -922,7 +977,7 @@
           </div>
         </details>
 
-        <!-- ② 週4日勤務（週休3日）の給与モデル（アコーディオン） -->
+        <!-- ② 週4日勤務の給与モデル -->
         <details class="group bg-white border border-slate-200 hover:border-teal-600 transition-colors">
           <summary class="cursor-pointer p-6 md:p-7 flex items-center justify-between gap-4 select-none">
             <div>
@@ -973,7 +1028,7 @@
           </div>
         </details>
 
-        <!-- 固定残業代の設定意図と実際の勤務時間についての説明（法令順守・実績数値は確認中仮置き） -->
+        <!-- 固定残業代の設定意図と実際の勤務時間についての説明 -->
         <div class="bg-slatebg border-l-4 border-navy p-6 md:p-8">
           <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
             <h4 class="text-lg font-black text-navy">固定残業時間の設定意図と、実際の勤務時間について</h4>
@@ -993,11 +1048,12 @@
 </section>
 
 <!-- =========================================================
-     06. EDUCATION & 3-YEAR GROWTH（基礎からの丁寧な指導と成長イメージ）
+     06. EDUCATION & 3-YEAR ROADMAP（一本の道「ROAD」として繋がる成長イメージ）
      ========================================================= -->
 <section id="education" class="w-full py-20 lg:py-28 px-4 sm:px-6 lg:px-12 bg-slatebg border-b border-slate-200">
   <div class="max-w-7xl mx-auto">
-    <div class="grid lg:grid-cols-12 gap-10 items-center mb-16 reveal-up">
+    <!-- サポート体制紹介 -->
+    <div class="grid lg:grid-cols-12 gap-10 items-center mb-20 reveal-up">
       <div class="lg:col-span-6">
         <span class="font-en text-xs font-extrabold tracking-[0.2em] text-medical uppercase">03 / EDUCATION &amp; SUPPORT</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-navy mt-2 mb-6 leading-tight">
@@ -1055,68 +1111,177 @@
       </div>
     </div>
 
-    <!-- 3年間の成長イメージ（年次一律ではなく習熟度に応じた段階的ステップ） -->
-    <div class="bg-white border border-slate-200 p-7 md:p-12 reveal-up">
-      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-200 pb-6 mb-8 gap-4">
+    <!-- =======================================================
+         3年間の成長ロードマップ（一本の繋がった「道・ロード」デザイン）
+         ======================================================= -->
+    <div class="bg-white border-2 border-navy p-6 sm:p-10 lg:p-14 reveal-up relative overflow-hidden">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between border-b border-slate-200 pb-6 mb-10 gap-4">
         <div>
-          <span class="font-en text-xs font-extrabold tracking-widest text-medical uppercase">3-YEAR GROWTH IMAGE</span>
-          <h3 class="text-2xl sm:text-3xl font-black text-navy mt-1">3年間の成長イメージ</h3>
+          <span class="font-en text-xs font-extrabold tracking-[0.22em] text-medical uppercase">3-YEAR CLINICAL ROADMAP</span>
+          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-navy mt-1">
+            基礎から専門領域へ続く、3年間の成長ロード
+          </h3>
         </div>
-        <p class="text-xs sm:text-sm text-slate-600 max-w-md">
-          ※下記は成長の目安です。年次によって一律に治療を任せるのではなく、一人ひとりの習熟度や経験に合わせて段階的にステップを進めます。
+        <p class="text-xs sm:text-sm text-slate-600 max-w-md leading-relaxed">
+          ※下記は成長の目安です。年次によって一律に治療を任せるのではなく、一人ひとりの習熟度や経験に合わせて一本の道を段階的に進みます。
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- 1年目 -->
-        <div class="border-t-4 border-medical pt-5">
-          <div class="aspect-[16/10] overflow-hidden mb-5 bg-slate-100">
-            <img src="images/11.jpg"
-                 data-fallback="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=85"
-                 alt="1年目：基礎を徹底的に習得"
-                 class="w-full h-full object-cover photo-trust" loading="lazy">
-          </div>
-          <span class="font-en text-xs font-extrabold text-medical tracking-widest">YEAR 01</span>
-          <h4 class="text-xl font-black text-navy mt-1 mb-3">基礎を徹底的に習得</h4>
-          <ul class="text-sm text-slate-700 space-y-2">
-            <li>・保存・歯内療法などの基本的な診療技術</li>
-            <li>・診療の流れや基本的な治療計画の立案</li>
-            <li>・模型実習と先輩Drによる丁寧なアシスト指導</li>
-          </ul>
+      <!-- PC用：一本の連続する「成長の道（ROAD）」SVGビジュアルインフォグラフィック -->
+      <div class="hidden lg:block mb-6">
+        <svg viewBox="0 0 1200 175" class="w-full h-auto" role="img" aria-label="1年目基礎習得から2年目一般臨床、3年目専門治療へと一本の道で繋がる3年間の成長ロードマップ">
+          <defs>
+            <linearGradient id="roadSurfaceGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#0284C7"/>
+              <stop offset="50%" stop-color="#0369A1"/>
+              <stop offset="100%" stop-color="#0B132B"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 背景の薄いグリッド補助線（成長の高度上昇を表現） -->
+          <line x1="40" y1="145" x2="1160" y2="145" stroke="#E2E8F0" stroke-width="1"/>
+          <line x1="40" y1="95" x2="1160" y2="95" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 4"/>
+          <line x1="40" y1="45" x2="1160" y2="45" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 4"/>
+
+          <!-- スタート地点ラベル -->
+          <text x="42" y="108" fill="#64748B" font-size="11" font-weight="bold">START</text>
+
+          <!-- 一本の連続した道路本体（アスファルト／トラッキングロード） -->
+          <path d="M 35 135 C 220 135, 290 112, 420 105 C 560 98, 660 72, 800 62 C 930 52, 1020 38, 1135 34"
+                fill="none" stroke="url(#roadSurfaceGrad)" stroke-width="34" stroke-linecap="round"/>
+
+          <!-- 道路の白線センターライン（流れを示すアニメーション破線） -->
+          <path d="M 35 135 C 220 135, 290 112, 420 105 C 560 98, 660 72, 800 62 C 930 52, 1020 38, 1135 34"
+                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="14 10" class="road-center-line"/>
+
+          <!-- 進行方向を示す矢印ヘッド -->
+          <polygon points="1168,33 1132,15 1134,51" fill="#0B132B"/>
+
+          <!-- マイルストーン 01：YEAR 01（基礎徹底習得） -->
+          <g transform="translate(200, 126)">
+            <circle cx="0" cy="0" r="24" fill="#FFFFFF" stroke="#0284C7" stroke-width="5"/>
+            <text x="0" y="5" fill="#0284C7" font-size="14" font-weight="900" text-anchor="middle">01</text>
+            <rect x="-65" y="-56" width="130" height="24" fill="#0284C7"/>
+            <text x="0" y="-40" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">YEAR 01｜基礎固め</text>
+          </g>
+
+          <!-- 中継矢印 01 → 02 -->
+          <text x="395" y="148" fill="#0284C7" font-size="11" font-weight="bold" text-anchor="middle">基礎を土台にステップアップ ››</text>
+
+          <!-- マイルストーン 02：YEAR 02（一般臨床の幅） -->
+          <g transform="translate(600, 86)">
+            <circle cx="0" cy="0" r="24" fill="#FFFFFF" stroke="#0369A1" stroke-width="5"/>
+            <text x="0" y="5" fill="#0369A1" font-size="14" font-weight="900" text-anchor="middle">02</text>
+            <rect x="-70" y="-56" width="140" height="24" fill="#0369A1"/>
+            <text x="0" y="-40" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">YEAR 02｜臨床の幅を拡大</text>
+          </g>
+
+          <!-- 中継矢印 02 → 03 -->
+          <text x="795" y="106" fill="#0B132B" font-size="11" font-weight="bold" text-anchor="middle">一般臨床から専門領域へ ››</text>
+
+          <!-- マイルストーン 03：YEAR 03（専門治療への挑戦） -->
+          <g transform="translate(990, 44)">
+            <circle cx="0" cy="0" r="24" fill="#FFFFFF" stroke="#0B132B" stroke-width="5"/>
+            <text x="0" y="5" fill="#0B132B" font-size="14" font-weight="900" text-anchor="middle">03</text>
+            <rect x="-75" y="34" width="150" height="24" fill="#0B132B"/>
+            <text x="0" y="50" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">YEAR 03｜専門治療へ挑戦</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- 3つのマイルストーン詳細（PCでは道路と直結した3連ステップ、スマホでは縦の道路ラインで連結） -->
+      <div class="relative pl-9 lg:pl-0">
+        <!-- スマホ用：縦に貫通する一本の「道（ロード）」 -->
+        <div class="lg:hidden absolute left-3.5 top-2 bottom-2 w-2.5 bg-gradient-to-b from-medical via-medical-dark to-navy" aria-hidden="true">
+          <div class="w-0.5 h-full mx-auto border-l-2 border-dashed border-white/80"></div>
         </div>
 
-        <!-- 2年目 -->
-        <div class="border-t-4 border-medical pt-5">
-          <div class="aspect-[16/10] overflow-hidden mb-5 bg-slate-100">
-            <img src="images/12.JPG"
-                 data-fallback="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=85"
-                 alt="2年目：一般臨床の幅を広げる"
-                 class="w-full h-full object-cover photo-trust" loading="lazy">
-          </div>
-          <span class="font-en text-xs font-extrabold text-medical tracking-widest">YEAR 02</span>
-          <h4 class="text-xl font-black text-navy mt-1 mb-3">一般臨床の幅を広げる</h4>
-          <ul class="text-sm text-slate-700 space-y-2">
-            <li>・歯周治療、補綴など幅広い症例への対応力</li>
-            <li>・初診から治療完了まで一貫した担当制診療</li>
-            <li>・患者様へのカウンセリング・説明スキルの向上</li>
-          </ul>
-        </div>
+        <div class="grid lg:grid-cols-3 gap-8 lg:gap-0 lg:border-2 lg:border-navy lg:divide-x-2 lg:divide-navy">
+          
+          <!-- STEP 01 -->
+          <div class="relative bg-slatebg lg:bg-white p-6 sm:p-8 flex flex-col">
+            <!-- スマホ用マイルストーン丸印 -->
+            <div class="lg:hidden absolute -left-[34px] top-6 w-7 h-7 bg-medical text-white font-en text-xs font-extrabold flex items-center justify-center border-2 border-white shadow">01</div>
 
-        <!-- 3年目 -->
-        <div class="border-t-4 border-navy pt-5">
-          <div class="aspect-[16/10] overflow-hidden mb-5 bg-slate-100">
-            <img src="images/13.jpg"
-                 data-fallback="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=85"
-                 alt="3年目：専門的な治療にも挑戦"
-                 class="w-full h-full object-cover photo-trust" loading="lazy">
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-en text-xs font-extrabold tracking-widest text-white bg-medical px-3 py-1">STEP 01 / YEAR 01</span>
+              <span class="hidden lg:inline font-en text-xs font-extrabold text-medical">NEXT STEP →</span>
+            </div>
+
+            <div class="aspect-[16/10] overflow-hidden mb-5 bg-slate-100 border border-slate-200">
+              <img src="images/11.jpg"
+                   data-fallback="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=85"
+                   alt="1年目：基礎を徹底的に習得"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+
+            <h4 class="text-xl font-black text-navy mb-3">基礎を徹底的に習得</h4>
+            <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+              まずは歯科医師としての揺るぎない土台をつくる期間。模型実習と先輩Drのマンツーマン指導から始めます。
+            </p>
+            <ul class="text-sm font-medium text-slate-700 space-y-2 mt-auto pt-4 border-t border-slate-200">
+              <li>・保存・歯内療法などの基本的な診療技術</li>
+              <li>・診療の流れや基本的な治療計画の立案</li>
+              <li>・模型実習と先輩Drによる丁寧なアシスト指導</li>
+            </ul>
           </div>
-          <span class="font-en text-xs font-extrabold text-navy tracking-widest">YEAR 03</span>
-          <h4 class="text-xl font-black text-navy mt-1 mb-3">専門的な治療にも挑戦</h4>
-          <ul class="text-sm text-slate-700 space-y-2">
-            <li>・インプラント治療（診断〜ガイド下オペ）</li>
-            <li>・口腔外科治療・精密義歯</li>
-            <li>・インビザラインなどのマウスピース矯正</li>
-          </ul>
+
+          <!-- STEP 02 -->
+          <div class="relative bg-slatebg lg:bg-white p-6 sm:p-8 flex flex-col">
+            <!-- スマホ用マイルストーン丸印 -->
+            <div class="lg:hidden absolute -left-[34px] top-6 w-7 h-7 bg-medical-dark text-white font-en text-xs font-extrabold flex items-center justify-center border-2 border-white shadow">02</div>
+
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-en text-xs font-extrabold tracking-widest text-white bg-medical-dark px-3 py-1">STEP 02 / YEAR 02</span>
+              <span class="hidden lg:inline font-en text-xs font-extrabold text-medical-dark">NEXT STEP →</span>
+            </div>
+
+            <div class="aspect-[16/10] overflow-hidden mb-5 bg-slate-100 border border-slate-200">
+              <img src="images/12.JPG"
+                   data-fallback="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=85"
+                   alt="2年目：一般臨床の幅を広げる"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+
+            <h4 class="text-xl font-black text-navy mb-3">一般臨床の幅を広げる</h4>
+            <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+              1年目で身につけた基礎を土台に、担当患者様の初診から治療完了まで一貫して向き合い、臨床力を広げます。
+            </p>
+            <ul class="text-sm font-medium text-slate-700 space-y-2 mt-auto pt-4 border-t border-slate-200">
+              <li>・歯周治療、補綴など幅広い症例への対応力</li>
+              <li>・初診から治療完了まで一貫した担当制診療</li>
+              <li>・患者様へのカウンセリング・説明スキルの向上</li>
+            </ul>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="relative bg-slatebg lg:bg-medical-soft/50 p-6 sm:p-8 flex flex-col">
+            <!-- スマホ用マイルストーン丸印 -->
+            <div class="lg:hidden absolute -left-[34px] top-6 w-7 h-7 bg-navy text-white font-en text-xs font-extrabold flex items-center justify-center border-2 border-white shadow">03</div>
+
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-en text-xs font-extrabold tracking-widest text-white bg-navy px-3 py-1">STEP 03 / YEAR 03</span>
+              <span class="font-en text-xs font-extrabold text-navy">SPECIALIST STAGE</span>
+            </div>
+
+            <div class="aspect-[16/10] overflow-hidden mb-5 bg-slate-100 border border-slate-200">
+              <img src="images/13.jpg"
+                   data-fallback="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=85"
+                   alt="3年目：専門的な治療にも挑戦"
+                   class="w-full h-full object-cover photo-trust" loading="lazy">
+            </div>
+
+            <h4 class="text-xl font-black text-navy mb-3">専門的な治療にも挑戦</h4>
+            <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+              確かな一般臨床の土台があるからこそ、インプラントや外科・マウスピース矯正へ安全に挑戦できます。
+            </p>
+            <ul class="text-sm font-medium text-slate-700 space-y-2 mt-auto pt-4 border-t border-slate-200">
+              <li>・インプラント治療（診断〜ガイド下オペ）</li>
+              <li>・口腔外科治療・精密義歯</li>
+              <li>・インビザラインなどのマウスピース矯正</li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </div>
@@ -1124,7 +1289,7 @@
 </section>
 
 <!-- =========================================================
-     07. SEMINAR SUPPORT（学びたい気持ちに、医院が本気で応える。）
+     07. SEMINAR SUPPORT
      ========================================================= -->
 <section class="w-full py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 items-center reveal-up">
@@ -1181,7 +1346,7 @@
 </section>
 
 <!-- =========================================================
-     08. CAREER PATH（一般臨床・インプラント強調・マウスピース矯正の3軸）
+     08. CAREER PATH
      ========================================================= -->
 <section id="career" class="w-full py-20 lg:py-28 px-4 sm:px-6 lg:px-12 bg-navy text-white">
   <div class="max-w-7xl mx-auto">
@@ -1222,7 +1387,7 @@
         </div>
       </div>
 
-      <!-- 02 IMPLANT（ターゲットの関心が特に高いため視覚的に強調） -->
+      <!-- 02 IMPLANT -->
       <div class="bg-white text-navy border-4 border-medical flex flex-col relative shadow-2xl reveal-up">
         <div class="bg-medical text-white px-5 py-2 text-xs font-bold tracking-wider flex justify-between items-center">
           <span>HIGH INTEREST FIELD</span>
@@ -1275,7 +1440,7 @@
 </section>
 
 <!-- =========================================================
-     09. BENEFITS & COMMUTE（遠方通勤・新幹線全額支給・男性育休実績）
+     09. BENEFITS & COMMUTE
      ========================================================= -->
 <section class="w-full py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto">
@@ -1287,7 +1452,6 @@
     </div>
 
     <div class="grid lg:grid-cols-2 gap-8 reveal-up">
-      <!-- 遠方からの通勤・新幹線サポート -->
       <div class="border border-slate-200 bg-slatebg grid sm:grid-cols-12 overflow-hidden">
         <div class="sm:col-span-5 aspect-[4/3] sm:aspect-auto">
           <img src="images/07.jpg"
@@ -1308,7 +1472,6 @@
         </div>
       </div>
 
-      <!-- 産休・育休（男性歯科医師の取得実績あり） -->
       <div class="border border-slate-200 bg-slatebg grid sm:grid-cols-12 overflow-hidden">
         <div class="sm:col-span-5 aspect-[4/3] sm:aspect-auto">
           <img src="images/18.JPG"
@@ -1334,7 +1497,7 @@
 </section>
 
 <!-- =========================================================
-     10. GRADUATE STUDENT BANNER（大学院生アルバイト募集・独立枠）
+     10. GRADUATE STUDENT BANNER
      ========================================================= -->
 <section id="graduate" class="w-full py-16 px-4 sm:px-6 lg:px-12 bg-medical-soft border-b border-sky-200">
   <div class="max-w-6xl mx-auto bg-white border-2 border-medical p-7 md:p-10 shadow-sm reveal-up">
@@ -1364,7 +1527,7 @@
 </section>
 
 <!-- =========================================================
-     11. NUMBERS & DAILY SCHEDULE（数字で見る医院・一日の流れ保留枠）
+     11. NUMBERS & DAILY SCHEDULE
      ========================================================= -->
 <section class="w-full py-20 px-4 sm:px-6 lg:px-12 bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto">
@@ -1393,7 +1556,6 @@
       </div>
     </div>
 
-    <!-- 一日の流れ（既存保留ステータス維持） -->
     <div class="mt-8 bg-slatebg border border-slate-200 p-5 flex flex-wrap items-center justify-between gap-3">
       <span class="text-sm font-bold text-navy">一日の診療・研修スケジュール</span>
       <span class="status-pending">【要確認】一日の流れセクションのスケジュール調整中（保留）</span>
@@ -1402,7 +1564,7 @@
 </section>
 
 <!-- =========================================================
-     12. DIRECTOR MESSAGE & SENIOR VOICES（既存原稿・保留ステータス維持）
+     12. DIRECTOR MESSAGE & SENIOR VOICES
      ========================================================= -->
 <section id="director" class="w-full py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-slatebg border-b border-slate-200">
   <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 items-center reveal-up">
@@ -1491,7 +1653,7 @@
 </section>
 
 <!-- =========================================================
-     13. FLOW / FAQ / REQUIREMENTS（見学ステップ・よくある質問・募集要項）
+     13. FLOW / FAQ / REQUIREMENTS
      ========================================================= -->
 <section id="flow" class="w-full py-20 px-4 sm:px-6 lg:px-12 bg-slatebg border-b border-slate-200">
   <div class="max-w-7xl mx-auto">
@@ -1544,7 +1706,7 @@
   </div>
 </section>
 
-<!-- よくある質問（短時間勤務の記述を削除し、最新方針に整合） -->
+<!-- よくある質問 -->
 <section id="faq" class="w-full py-20 px-4 sm:px-6 lg:px-12 bg-white border-b border-slate-200">
   <div class="max-w-4xl mx-auto reveal-up">
     <div class="text-center mb-10">
@@ -1626,7 +1788,7 @@
   </div>
 </section>
 
-<!-- 募集要項（短時間勤務列を削除し、週5常勤・週4常勤の2列構成へ最適化） -->
+<!-- 募集要項 -->
 <section id="req" class="w-full py-20 px-4 sm:px-6 lg:px-12 bg-slatebg">
   <div class="max-w-5xl mx-auto reveal-up">
     <div class="text-center mb-10">
@@ -1672,7 +1834,248 @@
           </tr>
           <tr>
             <td class="font-bold text-navy">応募条件</td>
-  // 3. 新規コンテンツ「あなたに合った働き方は？」全5問・3タイプ＋Q3学び連動診断ロジック
+            <td colspan="2">
+              歯科医師免許をお持ちの方（卒後臨床経験2年目以上・ブランク可）<br>
+              最低3年以上の勤続を希望します
+            </td>
+          </tr>
+          <tr>
+            <td class="font-bold text-navy">選考</td>
+            <td colspan="2">
+              書類選考・面接・見学（見学のみもOK）。提出書類：志望理由書、歯科医師免許証、写真付き履歴書
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bg-white border border-slate-200 p-5 mt-6 text-center">
+      <p class="text-xs font-bold text-slate-500 mb-2">関連募集ページ</p>
+      <div class="flex flex-wrap justify-center gap-4 text-sm font-bold">
+        <a class="text-medical hover:underline" href="https://www.nakamura-sika.net/recruit/occupations/dr_Gstudent.php">大学院生アルバイト募集要項</a>
+        <span class="text-slate-300">|</span>
+        <a class="text-medical hover:underline" href="https://www.nakamura-sika.net/recruit/womensociety/">福利厚生・育休実績について</a>
+        <span class="text-slate-300">|</span>
+        <a class="text-medical hover:underline" href="https://www.nakamura-sika.net/recruit/zoom/">ZOOM面接のご案内</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     14. CTA SECTION
+     ========================================================= -->
+<section id="cta" class="w-full py-20 lg:py-28 px-4 sm:px-6 lg:px-12 bg-navy text-white text-center border-t border-slate-800">
+  <div class="max-w-4xl mx-auto">
+    <span class="font-en text-xs font-extrabold tracking-[0.25em] text-sky-400 uppercase">CONTACT &amp; VISIT</span>
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mt-3 mb-4 leading-tight">
+      まずは、医院の雰囲気を見に来ませんか？
+    </h2>
+    <p class="text-sm sm:text-base text-slate-300 mb-10 leading-relaxed">
+      見学だけ、相談だけでも歓迎です。給与や働き方、教育体制についてお気軽にお問い合わせください。
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+      <a href="https://www.nakamura-sika.net/recruit/mail/" class="btn-solid-medical px-8 py-4 text-base font-bold">
+        医院見学を申し込む
+      </a>
+      <a href="https://lin.ee/Ku62Vx0" class="btn-solid-line px-8 py-4 text-base font-bold">
+        LINEで相談する
+      </a>
+      <a href="https://www.nakamura-sika.net/recruit/mail/" class="bg-white text-navy hover:bg-slate-100 transition-colors px-8 py-4 text-base font-bold">
+        応募する
+      </a>
+    </div>
+
+    <div class="inline-block border border-white/20 bg-white/5 px-8 py-5">
+      <span class="block text-xs text-slate-300 mb-1">お電話でのお問い合わせ（フリーダイヤル）</span>
+      <a href="tel:0120-084-982" class="font-en text-2xl sm:text-3xl font-extrabold tracking-wider text-white hover:text-sky-300 transition-colors">
+        0120-084-982
+      </a>
+      <span class="block text-xs text-slate-400 mt-1">代表電話：084-982-9800</span>
+    </div>
+
+    <p class="text-xs mt-6 text-slate-400">
+      <a class="hover:text-white underline underline-offset-4" href="https://www.instagram.com/nakamura_dental_clinic_recruit/" target="_blank" rel="noopener">
+        採用公式Instagramはこちら
+      </a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="bg-slatebg pt-16 pb-24 md:pb-10 border-t border-slate-200 text-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 border-b border-slate-300 pb-12">
+      <div>
+        <h4 class="font-black text-navy mb-4 border-l-4 border-medical pl-2.5 text-sm">診療内容 1</h4>
+        <ul class="space-y-2 text-xs text-slate-600">
+          <li><a href="https://www.nakamura-sika.net/dental/general.php" class="hover:text-medical">むし歯</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/preventive.php" class="hover:text-medical">予防歯科</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/esthetic.php" class="hover:text-medical">審美歯科（メタルフリー）</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/implant.php" class="hover:text-medical">インプラント</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/denture.php" class="hover:text-medical">入れ歯治療</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/bridge.php" class="hover:text-medical">ブリッジ治療</a></li>
+          <li><a href="https://www.nakamura-sika.net/lp_invisalign/" class="hover:text-medical">インビザライン</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/orthodontic.php" class="hover:text-medical">矯正治療</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/whitening.php" class="hover:text-medical">ホワイトニング</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-black text-navy mb-4 border-l-4 border-medical pl-2.5 text-sm">診療内容 2</h4>
+        <ul class="space-y-2 text-xs text-slate-600">
+          <li><a href="https://www.nakamura-sika.net/dental/kids.php" class="hover:text-medical">小児歯科</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/maternity.php" class="hover:text-medical">マタニティ歯科</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/surgery.php" class="hover:text-medical">口腔外科</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/preortho.php" class="hover:text-medical">プレオルソこども矯正</a></li>
+          <li><a href="https://www.nakamura-sika.net/dental/housecall.php" class="hover:text-medical">訪問歯科診療</a></li>
+          <li><a href="https://www.nakamura-sika.net/lifetime/maternity_baby.php" class="hover:text-medical">妊婦さん向けメッセージ</a></li>
+          <li><a href="https://www.nakamura-sika.net/lifetime/adult.php" class="hover:text-medical">成人向け治療・セカンドオピニョン</a></li>
+          <li><a href="https://www.nakamura-sika.net/lifetime/senior.php" class="hover:text-medical">シニア向け・こだわりの入れ歯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-black text-navy mb-4 border-l-4 border-medical pl-2.5 text-sm">医院のご案内</h4>
+        <ul class="space-y-2 text-xs text-slate-600">
+          <li><a href="https://www.nakamura-sika.net/" class="hover:text-medical">HOME</a></li>
+          <li><a href="https://www.nakamura-sika.net/staff/" class="hover:text-medical">院長・スタッフ紹介</a></li>
+          <li><a href="https://www.nakamura-sika.net/clinic.php" class="hover:text-medical">クリニック紹介</a></li>
+          <li><a href="https://www.nakamura-sika.net/ct.php" class="hover:text-medical">医療用CT</a></li>
+          <li><a href="https://www.nakamura-sika.net/first.php" class="hover:text-medical">初めてお越しの方へ</a></li>
+          <li><a href="https://www.nakamura-sika.net/access.php" class="hover:text-medical">地図・駐車場</a></li>
+          <li><a href="https://www.nakamura-sika.net/lifetime/kidsclub.php" class="hover:text-medical">キッズクラブ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-black text-navy mb-4 border-l-4 border-medical pl-2.5 text-sm">ご相談・その他</h4>
+        <ul class="space-y-2 text-xs text-slate-600">
+          <li><a href="https://www.nakamura-sika.net/consultation/" class="hover:text-medical">無料相談</a></li>
+          <li><a href="https://lin.ee/Ku62Vx0" class="hover:text-medical">LINEで採用相談</a></li>
+          <li><a href="https://www.nakamura-sika.net/chatai/" class="hover:text-medical">Aiチャットご利用上の注意点</a></li>
+          <li><a href="https://www.nakamura-sika.net/recruit/" target="_blank" rel="noopener" class="hover:text-medical">求人専用サイト</a></li>
+          <li><a href="https://www.nakamura-sika.net/orthodontic/" target="_blank" rel="noopener" class="hover:text-medical">矯正歯科専用サイト</a></li>
+          <li><a href="http://www.fukuyama-ceramics.com/" target="_blank" rel="noopener" class="hover:text-medical">審美歯科専用サイト</a></li>
+          <li><a href="http://www.fukuyama-denture.com/" target="_blank" rel="noopener" class="hover:text-medical">精密義歯・入れ歯専用サイト</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-10 items-start justify-between mb-8">
+      <div class="w-full lg:w-1/2">
+        <p class="text-navy font-black text-xl mb-2">なかむら歯科クリニック</p>
+        <div class="text-slate-600 text-xs space-y-1 mb-4">
+          <p>住所：〒721-0942 広島県福山市引野町3丁目37-27（駐車場61台完備）</p>
+          <p>電車：JR東福山駅南口から直進つきあたり 800m</p>
+          <p>お車：国道2号線東福山駅交差点を南に 500m</p>
+        </div>
+        <div class="bg-white p-4 border border-slate-200 inline-block w-full sm:w-auto">
+          <p class="text-sm font-bold text-navy">電話番号：<a href="tel:084-982-9800" class="hover:text-medical">084-982-9800</a></p>
+          <p class="text-lg font-black text-medical mt-1">フリーダイヤル：<a href="tel:0120-084-982" class="hover:text-medical-dark">0120-084-982</a></p>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-1/2 bg-white p-6 border border-slate-200">
+        <table class="w-full text-xs mb-3 border-collapse text-center">
+          <thead>
+            <tr class="bg-slate-100 text-navy">
+              <th class="border border-slate-200 p-2 w-1/4">診療時間</th>
+              <th class="border border-slate-200 p-2">月</th>
+              <th class="border border-slate-200 p-2">火</th>
+              <th class="border border-slate-200 p-2">水</th>
+              <th class="border border-slate-200 p-2">木</th>
+              <th class="border border-slate-200 p-2">金</th>
+              <th class="border border-slate-200 p-2 text-medical">土</th>
+              <th class="border border-slate-200 p-2 text-red-600">日祝</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-slate-200 p-2 font-bold text-navy">8:30〜17:30</td>
+              <td class="border border-slate-200 p-2 font-bold text-medical text-base">★</td>
+              <td class="border border-slate-200 p-2 font-bold text-medical text-base">★</td>
+              <td class="border border-slate-200 p-2 font-bold text-medical text-base">★</td>
+              <td class="border border-slate-200 p-2 font-bold text-medical text-base">★</td>
+              <td class="border border-slate-200 p-2 font-bold text-medical text-base">★</td>
+              <td class="border border-slate-200 p-2 font-bold text-navy text-base">●</td>
+              <td class="border border-slate-200 p-2 font-bold text-red-600 text-base">×</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="text-xs text-medical font-bold mb-1">お昼も休まず常時営業（最終受付 17:00／休診日：日曜・祝日）</p>
+        <p class="text-xs text-slate-600 bg-slatebg p-2 border border-slate-200 mt-2">
+          保育士による託児サービス：★印は託児サービス有（10時〜13時まで）
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center text-slate-500 pt-6 border-t border-slate-300 text-xs">
+      Copyright &copy; なかむら歯科クリニック All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- スマホ用追従フッターバー -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 z-40 md:hidden grid grid-cols-4 h-16">
+  <a href="tel:0120-084-982" class="flex flex-col items-center justify-center text-navy border-r border-slate-200">
+    <span class="font-en text-xs font-extrabold">TEL</span>
+    <span class="text-[10px] font-bold mt-0.5">電話相談</span>
+  </a>
+  <a href="https://www.nakamura-sika.net/recruit/mail/" class="flex flex-col items-center justify-center text-white bg-medical">
+    <span class="font-en text-xs font-extrabold">VISIT</span>
+    <span class="text-[10px] font-bold mt-0.5">見学申込</span>
+  </a>
+  <a href="https://lin.ee/Ku62Vx0" class="flex flex-col items-center justify-center text-line border-r border-slate-200">
+    <span class="font-en text-xs font-extrabold">LINE</span>
+    <span class="text-[10px] font-bold mt-0.5">LINE相談</span>
+  </a>
+  <a href="#diagnosis" class="flex flex-col items-center justify-center text-navy">
+    <span class="font-en text-xs font-extrabold">CHECK</span>
+    <span class="text-[10px] font-bold mt-0.5">働き方診断</span>
+  </a>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. ローカル画像が未配置のプレビュー環境用フォールバック処理
+  document.querySelectorAll('img[data-fallback]').forEach(img => {
+    const applyFallback = () => {
+      if (!img.dataset.fallbackApplied && img.dataset.fallback) {
+        img.dataset.fallbackApplied = 'true';
+        img.src = img.dataset.fallback;
+      }
+    };
+    img.addEventListener('error', applyFallback);
+    if (img.complete && img.naturalWidth === 0) {
+      applyFallback();
+    }
+  });
+
+  // 2. スマホ用ドロワーメニュー開閉
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const closeMenuBtn = document.getElementById('close-menu-btn');
+  const spMenu = document.getElementById('sp-menu');
+  const spOverlay = document.getElementById('sp-menu-overlay');
+
+  const toggleMenu = (forceClose = false) => {
+    if (!spMenu || !spOverlay) return;
+    const isOpen = forceClose ? false : !spMenu.classList.contains('open');
+    spMenu.classList.toggle('open', isOpen);
+    spOverlay.classList.toggle('hidden', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  };
+
+  if (hamburgerBtn) hamburgerBtn.addEventListener('click', () => toggleMenu(false));
+  if (closeMenuBtn) closeMenuBtn.addEventListener('click', () => toggleMenu(true));
+  if (spOverlay) spOverlay.addEventListener('click', () => toggleMenu(true));
+  document.querySelectorAll('.sp-nav-link').forEach(link => {
+    link.addEventListener('click', () => toggleMenu(true));
+  });
+
+  // 3. 「あなたに合った働き方は？」全5問・3タイプ＋Q3学び連動診断ロジック
   const questions = [
     {
       stepText: 'QUESTION 1/5',
@@ -1726,7 +2129,6 @@
     }
   ];
 
-  // 3タイプの診断結果データ（写真・推奨勤務スタイル・当院での実現内容）
   const resultTypes = {
     A: {
       badge: 'TYPE A',
@@ -1784,7 +2186,6 @@
     }
   };
 
-  // 質問3（学びたい分野）に応じたパーソナライズ情報
   const learningFocusMap = {
     A: {
       title: '一般歯科の基礎・幅広い臨床技術の習得',
@@ -1862,20 +2263,51 @@
     el.classList.add('diag-animate-in');
   };
 
+  window.handleDiagSelect = (optKey) => {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    userAnswers[currentQ] = optKey;
+
+    if (optionsBox) {
+      const cards = optionsBox.querySelectorAll('.diag-option-card');
+      cards.forEach((card, idx) => {
+        const key = ['A', 'B', 'C'][idx];
+        if (key === optKey) {
+          card.classList.remove('border-slate-200');
+          card.classList.add('is-selected', 'border-medical', 'bg-medical-soft');
+        } else {
+          card.classList.remove('is-selected', 'border-medical', 'bg-medical-soft');
+          card.classList.add('border-slate-200');
+        }
+      });
+    }
+
+    setTimeout(() => {
+      if (currentQ < questions.length - 1) {
+        currentQ++;
+        renderQuestion();
+        replayAnimation(qCard);
+      } else {
+        showResult();
+      }
+    }, 260);
+  };
+
   const renderQuestion = () => {
     isTransitioning = false;
     const q = questions[currentQ];
     const savedChoice = userAnswers[currentQ];
 
-    stepLabel.textContent = q.stepText;
-    stepCategory.textContent = q.category;
-    qText.textContent = q.text;
+    if (stepLabel) stepLabel.textContent = q.stepText;
+    if (stepCategory) stepCategory.textContent = q.category;
+    if (qText) qText.textContent = q.text;
     updateProgressUI(currentQ, false);
 
     if (prevBtn) {
       prevBtn.disabled = currentQ === 0;
     }
 
+    if (!optionsBox) return;
     optionsBox.innerHTML = '';
 
     q.options.forEach(opt => {
@@ -1894,37 +2326,12 @@
           ${isSelected ? '✓' : '→'}
         </span>
       `;
-
-      btn.addEventListener('click', () => {
-        if (isTransitioning) return;
-        isTransitioning = true;
-        userAnswers[currentQ] = opt.key;
-
-        // クリック時の選択状態を即時フィードバック
-        optionsBox.querySelectorAll('.diag-option-card').forEach(c => {
-          c.classList.remove('is-selected', 'border-medical', 'bg-medical-soft');
-          c.classList.add('border-slate-200');
-        });
-        btn.classList.remove('border-slate-200');
-        btn.classList.add('is-selected');
-
-        setTimeout(() => {
-          if (currentQ < questions.length - 1) {
-            currentQ++;
-            renderQuestion();
-            replayAnimation(qCard);
-          } else {
-            showResult();
-          }
-        }, 280);
-      });
-
+      btn.addEventListener('click', () => window.handleDiagSelect(opt.key));
       optionsBox.appendChild(btn);
     });
   };
 
   const evaluateDiagnosis = () => {
-    // 質問3（index 2）は学びたい分野の確認用であり、勤務日数の判定ロジックには含めない
     const styleQuestionIndices = [0, 1, 3, 4];
     let countA = 0;
     let countB = 0;
@@ -1937,30 +2344,26 @@
       else if (ans === 'C') countC++;
     });
 
-    // 単独トップの場合のみTYPE AまたはTYPE Bとし、同数・混在・C優勢の場合はバランス重視（TYPE C）へ判定
-    if (countA > countB && countA > countC) {
-      return 'A';
-    }
-    if (countB > countA && countB > countC) {
-      return 'B';
-    }
+    if (countA > countB && countA > countC) return 'A';
+    if (countB > countA && countB > countC) return 'B';
     return 'C';
   };
 
   const showResult = () => {
     isTransitioning = false;
-    qArea.classList.add('hidden');
-    resultArea.classList.remove('hidden');
-    replayAnimation(resultArea);
+    if (qArea) qArea.classList.add('hidden');
+    if (resultArea) {
+      resultArea.classList.remove('hidden');
+      replayAnimation(resultArea);
+    }
 
-    stepLabel.textContent = 'DIAGNOSIS RESULT';
-    stepCategory.textContent = '診断完了';
+    if (stepLabel) stepLabel.textContent = 'DIAGNOSIS RESULT';
+    if (stepCategory) stepCategory.textContent = '診断完了';
     updateProgressUI(4, true);
 
     const typeKey = evaluateDiagnosis();
     const data = resultTypes[typeKey];
 
-    // 画像設定（ローカル優先＋プレビュー用フォールバック）
     if (resImg) {
       delete resImg.dataset.fallbackApplied;
       resImg.onerror = () => {
@@ -1992,7 +2395,6 @@
       resClinicBullets.innerHTML = data.bullets.map(item => `<li>${item}</li>`).join('');
     }
 
-    // 質問3（index 2）の選択を学びの方向性として反映
     const q3Choice = userAnswers[2] || 'C';
     const learningData = learningFocusMap[q3Choice];
     if (resLearningTitle) resLearningTitle.textContent = learningData.title;
@@ -2015,8 +2417,8 @@
 
   if (backToQ5Btn) {
     backToQ5Btn.addEventListener('click', () => {
-      resultArea.classList.add('hidden');
-      qArea.classList.remove('hidden');
+      if (resultArea) resultArea.classList.add('hidden');
+      if (qArea) qArea.classList.remove('hidden');
       currentQ = questions.length - 1;
       renderQuestion();
       replayAnimation(qCard);
@@ -2027,16 +2429,16 @@
     resetBtn.addEventListener('click', () => {
       currentQ = 0;
       userAnswers = [null, null, null, null, null];
-      resultArea.classList.add('hidden');
-      qArea.classList.remove('hidden');
+      if (resultArea) resultArea.classList.add('hidden');
+      if (qArea) qArea.classList.remove('hidden');
       renderQuestion();
       replayAnimation(qCard);
     });
   }
 
-  if (optionsBox) renderQuestion();
+  renderQuestion();
 
-  // 4. スムーズスクロール & GSAP ScrollTrigger（プレビュー安全表示対応）
+  // 4. スムーズスクロール & GSAP ScrollTrigger
   try {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', (e) => {
@@ -2056,8 +2458,8 @@
       gsap.registerPlugin(ScrollTrigger);
       gsap.utils.toArray('.reveal-up').forEach((el) => {
         gsap.from(el, {
-          y: 18,
-          duration: 0.6,
+          y: 16,
+          duration: 0.55,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: el,
@@ -2068,7 +2470,7 @@
       });
     }
   } catch (err) {
-    console.warn('Animation initialization fallback:', err);
+    console.warn('Scroll animation fallback:', err);
   }
 });
 </script>
