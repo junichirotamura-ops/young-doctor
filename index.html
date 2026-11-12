@@ -52,11 +52,23 @@
     --medical: #0284C7;
   }
 
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     color: #1E293B;
     background-color: #FFFFFF;
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+  }
+
+  main,
+  section,
+  header,
+  footer {
+    max-width: 100%;
   }
 
   /* 微細なアナログノイズ質感オーバーレイ */
@@ -412,15 +424,15 @@
   <div class="w-full grid lg:grid-cols-12 min-h-[calc(100vh-110px)]">
     
     <!-- 左側 6カラム -->
-    <div class="lg:col-span-6 flex flex-col justify-between px-6 sm:px-10 lg:px-14 xl:px-20 py-12 lg:py-16 bg-white z-10">
+    <div class="lg:col-span-6 min-w-0 flex flex-col justify-between px-5 sm:px-10 lg:px-14 xl:px-20 py-10 sm:py-12 lg:py-16 bg-white z-10">
       <div>
-        <div class="inline-flex items-center gap-3 mb-7">
+        <div class="inline-flex flex-wrap items-center gap-2 sm:gap-3 mb-7">
           <span class="w-2.5 h-2.5 bg-medical"></span>
-          <span class="font-en text-xs font-extrabold tracking-[0.2em] text-medical uppercase">DOCTOR RECRUITMENT｜FUKUYAMA</span>
+          <span class="font-en text-xs font-extrabold tracking-[0.16em] sm:tracking-[0.2em] text-medical uppercase">DOCTOR RECRUITMENT｜FUKUYAMA</span>
           <span class="text-xs font-bold text-slate-500 border-l border-slate-300 pl-3">卒後臨床経験2年目以上</span>
         </div>
 
-        <h1 class="text-4xl sm:text-5xl xl:text-[3.5rem] font-black text-navy leading-[1.16] tracking-tight mb-7">
+        <h1 class="text-3xl sm:text-5xl xl:text-[3.5rem] font-black text-navy leading-[1.16] tracking-tight mb-7">
           安心して学べる。<br>
           <span class="text-medical">自分らしく</span>成長できる。
         </h1>
@@ -467,7 +479,7 @@
     </div>
 
     <!-- 右側 6カラム -->
-    <div class="lg:col-span-6 relative min-h-[380px] sm:min-h-[480px] lg:min-h-full bg-navy overflow-hidden group">
+    <div class="lg:col-span-6 min-w-0 relative min-h-[380px] sm:min-h-[480px] lg:min-h-full bg-navy overflow-hidden group">
       <img src="images/02.JPG"
            data-fallback="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85"
            alt="なかむら歯科クリニック 若手歯科医師と先輩ドクターの診療風景"
@@ -572,15 +584,15 @@
     <div class="grid lg:grid-cols-2 border-2 border-navy mb-14 reveal-up">
       
       <!-- LEFT: 5 DAYS（臨床集中・アクティブ成長スタイル） -->
-      <div class="bg-navy text-white flex flex-col border-b-2 lg:border-b-0 lg:border-r-2 border-navy relative overflow-hidden group">
+      <div class="min-w-0 bg-navy text-white flex flex-col border-b-2 lg:border-b-0 lg:border-r-2 border-navy relative overflow-hidden group">
         <!-- トップラベル -->
-        <div class="bg-medical px-6 py-3 flex items-center justify-between">
+        <div class="bg-medical px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2">
           <span class="text-xs sm:text-sm font-black tracking-wider">【週5日勤務｜臨床にしっかり向き合う】</span>
-          <span class="font-en text-xs font-extrabold tracking-widest bg-navy/30 px-2.5 py-0.5">ACTIVE CLINICAL</span>
+          <span class="font-en text-[11px] sm:text-xs font-extrabold tracking-widest bg-navy/30 px-2.5 py-0.5">ACTIVE CLINICAL</span>
         </div>
 
         <!-- ビジュアル＆メガタイポグラフィ複合エリア -->
-        <div class="p-6 sm:p-8 lg:p-10 flex-grow flex flex-col">
+        <div class="p-5 sm:p-8 lg:p-10 flex-grow flex flex-col">
           <div class="relative aspect-[16/10] overflow-hidden mb-6 border border-white/15">
             <img src="images/08.jpg"
                  data-fallback="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85"
@@ -588,12 +600,12 @@
                  class="w-full h-full object-cover photo-trust" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/25 to-transparent"></div>
             <!-- 5 DAYS メガタイポオーバーレイ -->
-            <div class="absolute bottom-3 left-5 right-5 flex items-end justify-between">
+            <div class="absolute bottom-3 left-4 right-4 sm:left-5 sm:right-5 flex flex-wrap items-end justify-between gap-2">
               <div class="font-en font-extrabold leading-none tracking-tighter">
-                <span class="text-6xl sm:text-7xl xl:text-8xl text-white">5</span>
-                <span class="text-2xl sm:text-3xl text-sky-400 ml-1">DAYS</span>
+                <span class="text-5xl sm:text-7xl xl:text-8xl text-white">5</span>
+                <span class="text-xl sm:text-3xl text-sky-400 ml-1">DAYS</span>
               </div>
-              <span class="text-xs font-bold bg-medical text-white px-3 py-1.5">週休2日制｜総支給 50.5万円〜</span>
+              <span class="text-[11px] sm:text-xs font-bold bg-medical text-white px-2.5 sm:px-3 py-1 sm:py-1.5">週休2日制｜総支給 50.5万円〜</span>
             </div>
           </div>
 
@@ -630,15 +642,15 @@
       </div>
 
       <!-- RIGHT: 4 DAYS（余暇充実・ゆとりライフスタイル） -->
-      <div class="bg-slatebg text-navy flex flex-col relative overflow-hidden group">
+      <div class="min-w-0 bg-slatebg text-navy flex flex-col relative overflow-hidden group">
         <!-- トップラベル -->
-        <div class="bg-teal-600 text-white px-6 py-3 flex items-center justify-between">
+        <div class="bg-teal-600 text-white px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2">
           <span class="text-xs sm:text-sm font-black tracking-wider">【週4日勤務｜仕事もプライベートも充実】</span>
-          <span class="font-en text-xs font-extrabold tracking-widest bg-navy/25 px-2.5 py-0.5">LIFE &amp; BALANCE</span>
+          <span class="font-en text-[11px] sm:text-xs font-extrabold tracking-widest bg-navy/25 px-2.5 py-0.5">LIFE &amp; BALANCE</span>
         </div>
 
         <!-- ビジュアル＆メガタイポグラフィ複合エリア -->
-        <div class="p-6 sm:p-8 lg:p-10 flex-grow flex flex-col">
+        <div class="p-5 sm:p-8 lg:p-10 flex-grow flex flex-col">
           <!-- 余暇の広がりを伝える2面フォトコラージュ -->
           <div class="relative aspect-[16/10] overflow-hidden mb-6 border border-slate-300 grid grid-cols-12 gap-1 bg-white">
             <div class="col-span-7 h-full overflow-hidden relative">
@@ -659,12 +671,12 @@
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent pointer-events-none"></div>
             <!-- 4 DAYS メガタイポオーバーレイ -->
-            <div class="absolute bottom-3 left-5 right-5 flex items-end justify-between">
+            <div class="absolute bottom-3 left-4 right-4 sm:left-5 sm:right-5 flex flex-wrap items-end justify-between gap-2">
               <div class="font-en font-extrabold leading-none tracking-tighter">
-                <span class="text-6xl sm:text-7xl xl:text-8xl text-navy">4</span>
-                <span class="text-2xl sm:text-3xl text-teal-600 ml-1">DAYS</span>
+                <span class="text-5xl sm:text-7xl xl:text-8xl text-navy">4</span>
+                <span class="text-xl sm:text-3xl text-teal-600 ml-1">DAYS</span>
               </div>
-              <span class="text-xs font-bold bg-teal-600 text-white px-3 py-1.5">週休3日制｜総支給 40.0万円〜</span>
+              <span class="text-[11px] sm:text-xs font-bold bg-teal-600 text-white px-2.5 sm:px-3 py-1 sm:py-1.5">週休3日制｜総支給 40.0万円〜</span>
             </div>
           </div>
 
@@ -703,8 +715,8 @@
     </div>
 
     <!-- スタッフ47名のチームフォロー体制バナー -->
-    <div class="bg-navy text-white p-7 md:p-10 grid md:grid-cols-12 gap-6 items-center reveal-up">
-      <div class="md:col-span-8">
+    <div class="bg-navy text-white p-6 sm:p-7 md:p-10 grid md:grid-cols-12 gap-6 items-center reveal-up">
+      <div class="md:col-span-8 min-w-0">
         <span class="font-en text-xs font-bold tracking-[0.2em] text-sky-400 uppercase">TEAM BACKUP SYSTEM</span>
         <h3 class="text-xl md:text-2xl font-black mt-1 mb-2">
           歯科医師9名・スタッフ総勢47名だから、休暇も気兼ねなく取れる環境。
@@ -713,7 +725,7 @@
           少人数の医院では「自分が休むと診療が回らない」と遠慮しがちですが、当院には9名の歯科医師と豊富なスタッフが在籍。希望休や有給休暇の取得時も、チーム全体で自然にフォローし合える体制が整っています。
         </p>
       </div>
-      <div class="md:col-span-4 flex md:justify-end">
+      <div class="md:col-span-4 min-w-0 flex md:justify-end">
         <div class="border border-white/25 px-6 py-4 bg-white/5 text-center w-full md:w-auto">
           <span class="block text-xs text-sky-300 font-bold mb-1">年間休暇制度</span>
           <span class="block text-base font-black">GW・夏期・冬期・特別・有給</span>
@@ -739,13 +751,13 @@
 
     <div id="diagnosis-app" class="bg-white border-2 border-navy shadow-sm reveal-up overflow-hidden">
       <!-- ヘッダーバー -->
-      <div class="bg-navy text-white px-6 sm:px-10 pt-5 pb-4">
-        <div class="flex items-center justify-between gap-4 mb-3">
-          <div class="flex items-center gap-3">
-            <span id="diag-step-label" class="font-en text-xs sm:text-sm font-extrabold tracking-[0.18em] text-sky-300">QUESTION 1/5</span>
-            <span id="diag-step-category" class="text-[11px] font-bold text-slate-300 border-l border-slate-700 pl-3">仕事で大切にしたい軸</span>
+      <div class="bg-navy text-white px-5 sm:px-10 pt-5 pb-4">
+        <div class="flex items-center justify-between gap-2 sm:gap-4 mb-3">
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 min-w-0">
+            <span id="diag-step-label" class="font-en text-xs sm:text-sm font-extrabold tracking-[0.14em] sm:tracking-[0.18em] text-sky-300">QUESTION 1/5</span>
+            <span id="diag-step-category" class="text-[11px] font-bold text-slate-300 border-l border-slate-700 pl-2 sm:pl-3 truncate">仕事で大切にしたい軸</span>
           </div>
-          <span id="diag-percent-label" class="font-en text-xs font-bold text-slate-300">20%</span>
+          <span id="diag-percent-label" class="font-en text-xs font-bold text-slate-300 flex-shrink-0">20%</span>
         </div>
         <div class="w-full h-1.5 bg-slate-800 overflow-hidden" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" id="diag-progress-container">
           <div id="diag-progress-bar" class="h-full bg-medical transition-all duration-500 ease-out" style="width: 20%;"></div>
@@ -889,7 +901,7 @@
   <div class="max-w-7xl mx-auto">
     <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
       
-      <div class="lg:col-span-5 reveal-up">
+      <div class="lg:col-span-5 min-w-0 reveal-up">
         <span class="font-en text-xs font-extrabold tracking-[0.2em] text-medical uppercase">02 / SALARY &amp; STABILITY</span>
         <h2 class="text-3xl sm:text-4xl font-black text-navy mt-2 mb-6 leading-tight">
           収入の不安を感じず、<br>
@@ -899,7 +911,7 @@
           若手のうちは、技術や経験を積むことが何より大切な時期。だからこそ、当院では安定した固定給をベースに、安心して臨床に取り組める給与体系を整えています。
         </p>
 
-        <div class="bg-navy text-white p-7 mb-6">
+        <div class="bg-navy text-white p-6 sm:p-7 mb-6">
           <span class="block text-xs font-bold text-sky-300 mb-1">週5日勤務（常勤・卒後2年目）総支給額</span>
           <div class="font-en text-4xl sm:text-5xl font-extrabold tracking-tight">
             505,000<span class="text-lg font-sans font-bold ml-1">円〜</span>
@@ -909,14 +921,14 @@
           </p>
         </div>
 
-        <div class="border border-slate-200 bg-slatebg p-6">
+        <div class="border border-slate-200 bg-slatebg p-5 sm:p-6">
           <h3 class="text-sm font-black text-navy mb-3">想定年収の例（週5日勤務・常勤）</h3>
           <div class="grid grid-cols-5 gap-1 text-center bg-white border border-slate-200 divide-x divide-slate-200">
-            <div class="py-2.5"><span class="block text-[11px] text-slate-500">3年目</span><span class="font-en font-extrabold text-sm text-navy">630万</span></div>
-            <div class="py-2.5"><span class="block text-[11px] text-slate-500">4年目</span><span class="font-en font-extrabold text-sm text-navy">666万</span></div>
-            <div class="py-2.5"><span class="block text-[11px] text-slate-500">5年目</span><span class="font-en font-extrabold text-sm text-navy">726万</span></div>
-            <div class="py-2.5"><span class="block text-[11px] text-slate-500">6年目</span><span class="font-en font-extrabold text-sm text-navy">786万</span></div>
-            <div class="py-2.5"><span class="block text-[11px] text-slate-500">7年目</span><span class="font-en font-extrabold text-sm text-medical">846万</span></div>
+            <div class="py-2.5"><span class="block text-[11px] text-slate-500">3年目</span><span class="font-en font-extrabold text-xs sm:text-sm text-navy">630万</span></div>
+            <div class="py-2.5"><span class="block text-[11px] text-slate-500">4年目</span><span class="font-en font-extrabold text-xs sm:text-sm text-navy">666万</span></div>
+            <div class="py-2.5"><span class="block text-[11px] text-slate-500">5年目</span><span class="font-en font-extrabold text-xs sm:text-sm text-navy">726万</span></div>
+            <div class="py-2.5"><span class="block text-[11px] text-slate-500">6年目</span><span class="font-en font-extrabold text-xs sm:text-sm text-navy">786万</span></div>
+            <div class="py-2.5"><span class="block text-[11px] text-slate-500">7年目</span><span class="font-en font-extrabold text-xs sm:text-sm text-medical">846万</span></div>
           </div>
           <p class="text-[11px] text-slate-500 mt-2.5">
             ※月額総支給額×12か月で算出した参考年収です（住宅手当・交通費を含む／賞与等は含みません）。住宅手当は遠方から当院近辺に転居する常勤歯科医師が対象です。
@@ -924,7 +936,7 @@
         </div>
       </div>
 
-      <div class="lg:col-span-7 space-y-5 reveal-up">
+      <div class="lg:col-span-7 min-w-0 space-y-5 reveal-up">
         
         <!-- ① 週5日勤務の給与モデル -->
         <details class="group bg-white border border-slate-200 hover:border-medical transition-colors">
@@ -1054,7 +1066,7 @@
   <div class="max-w-7xl mx-auto">
     <!-- サポート体制紹介 -->
     <div class="grid lg:grid-cols-12 gap-10 items-center mb-20 reveal-up">
-      <div class="lg:col-span-6">
+      <div class="lg:col-span-6 min-w-0">
         <span class="font-en text-xs font-extrabold tracking-[0.2em] text-medical uppercase">03 / EDUCATION &amp; SUPPORT</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-navy mt-2 mb-6 leading-tight">
           分からないことを、<br>
@@ -1089,7 +1101,7 @@
         </div>
       </div>
 
-      <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+      <div class="lg:col-span-6 min-w-0 grid grid-cols-2 gap-4">
         <div class="col-span-2 aspect-[16/9] overflow-hidden bg-navy">
           <img src="images/04.jpg"
                data-fallback="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1000&q=85"
@@ -1293,7 +1305,7 @@
      ========================================================= -->
 <section class="w-full py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 items-center reveal-up">
-    <div class="lg:col-span-6">
+    <div class="lg:col-span-6 min-w-0">
       <span class="font-en text-xs font-extrabold tracking-[0.2em] text-medical uppercase">SEMINAR &amp; STUDY SUPPORT</span>
       <h2 class="text-3xl sm:text-4xl font-black text-navy mt-2 mb-5 leading-tight">
         学びたい気持ちに、<br>
@@ -1307,12 +1319,12 @@
       </p>
     </div>
 
-    <div class="lg:col-span-6 bg-slatebg border border-slate-200 p-6 md:p-8">
+    <div class="lg:col-span-6 min-w-0 bg-slatebg border border-slate-200 p-5 sm:p-6 md:p-8">
       <h3 class="text-base font-black text-navy mb-2">医院規定のセミナー参加費用補助制度</h3>
       <p class="text-xs text-slate-500 mb-4">
         ※医院指定セミナーは全額医院負担。希望セミナーについては下記規定をベースに、意欲や内容に応じて柔軟に支援します。
       </p>
-      <div class="overflow-x-auto">
+      <div class="overflow-x-auto w-full">
         <table class="modern-table text-sm text-center">
           <thead>
             <tr>
@@ -1452,14 +1464,14 @@
     </div>
 
     <div class="grid lg:grid-cols-2 gap-8 reveal-up">
-      <div class="border border-slate-200 bg-slatebg grid sm:grid-cols-12 overflow-hidden">
-        <div class="sm:col-span-5 aspect-[4/3] sm:aspect-auto">
+      <div class="min-w-0 border border-slate-200 bg-slatebg grid sm:grid-cols-12 overflow-hidden">
+        <div class="sm:col-span-5 min-w-0 aspect-[4/3] sm:aspect-auto">
           <img src="images/07.jpg"
                data-fallback="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=800&q=85"
                alt="遠方からの新幹線通勤サポート"
                class="w-full h-full object-cover photo-trust" loading="lazy">
         </div>
-        <div class="sm:col-span-7 p-6 md:p-8 flex flex-col justify-center">
+        <div class="sm:col-span-7 min-w-0 p-6 md:p-8 flex flex-col justify-center">
           <span class="font-en text-xs font-extrabold text-medical tracking-wider mb-1">COMMUTE SUPPORT</span>
           <h3 class="text-xl font-black text-navy mb-3">遠方からの通勤もしっかりサポート。</h3>
           <p class="text-sm text-slate-600 leading-relaxed mb-4">
@@ -1472,14 +1484,14 @@
         </div>
       </div>
 
-      <div class="border border-slate-200 bg-slatebg grid sm:grid-cols-12 overflow-hidden">
-        <div class="sm:col-span-5 aspect-[4/3] sm:aspect-auto">
+      <div class="min-w-0 border border-slate-200 bg-slatebg grid sm:grid-cols-12 overflow-hidden">
+        <div class="sm:col-span-5 min-w-0 aspect-[4/3] sm:aspect-auto">
           <img src="images/18.JPG"
                data-fallback="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=85"
                alt="産休・育休・男性歯科医師の育休実績"
                class="w-full h-full object-cover photo-trust" loading="lazy">
         </div>
-        <div class="sm:col-span-7 p-6 md:p-8 flex flex-col justify-center">
+        <div class="sm:col-span-7 min-w-0 p-6 md:p-8 flex flex-col justify-center">
           <span class="font-en text-xs font-extrabold text-medical tracking-wider mb-1">PARENTAL LEAVE</span>
           <h3 class="text-xl font-black text-navy mb-3">男性歯科医師の育休取得実績も多数。</h3>
           <p class="text-sm text-slate-600 leading-relaxed mb-4">
@@ -1500,10 +1512,10 @@
      10. GRADUATE STUDENT BANNER
      ========================================================= -->
 <section id="graduate" class="w-full py-16 px-4 sm:px-6 lg:px-12 bg-medical-soft border-b border-sky-200">
-  <div class="max-w-6xl mx-auto bg-white border-2 border-medical p-7 md:p-10 shadow-sm reveal-up">
+  <div class="max-w-6xl mx-auto bg-white border-2 border-medical p-6 sm:p-7 md:p-10 shadow-sm reveal-up">
     <div class="grid lg:grid-cols-12 gap-6 items-center">
-      <div class="lg:col-span-8">
-        <div class="inline-flex items-center gap-2 bg-medical text-white text-xs font-bold px-3 py-1 mb-3">
+      <div class="lg:col-span-8 min-w-0">
+        <div class="inline-flex flex-wrap items-center gap-2 bg-medical text-white text-xs font-bold px-3 py-1 mb-3">
           <span>PART-TIME FOR GRADUATE STUDENTS</span>
           <span>｜</span>
           <span>常勤募集とは別枠の専用案内</span>
@@ -1515,7 +1527,7 @@
           大学院での研究や学業と両立しながら、臨床経験を積みたい先生へ。当院では大学院生のアルバイト勤務も募集しています（岡山方面からの新幹線通勤実績あり・交通費全額支給）。
         </p>
       </div>
-      <div class="lg:col-span-4 flex lg:justify-end">
+      <div class="lg:col-span-4 min-w-0 flex lg:justify-end">
         <a href="https://www.nakamura-sika.net/recruit/occupations/dr_Gstudent.php"
            class="btn-solid-navy w-full lg:w-auto px-7 py-4 text-sm font-bold text-center flex items-center justify-center gap-2">
           <span>大学院生アルバイトの募集要項を見る</span>
@@ -1568,7 +1580,7 @@
      ========================================================= -->
 <section id="director" class="w-full py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-slatebg border-b border-slate-200">
   <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 items-center reveal-up">
-    <div class="lg:col-span-4">
+    <div class="lg:col-span-4 min-w-0">
       <div class="aspect-[4/5] overflow-hidden bg-navy">
         <img src="images/20.jpg"
              data-fallback="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85"
@@ -1576,7 +1588,7 @@
              class="w-full h-full object-cover photo-trust" loading="lazy">
       </div>
     </div>
-    <div class="lg:col-span-8">
+    <div class="lg:col-span-8 min-w-0">
       <span class="font-en text-xs font-extrabold tracking-[0.2em] text-medical uppercase">MESSAGE FROM DIRECTOR</span>
       <h2 class="text-3xl font-black text-navy mt-2 mb-4">院長メッセージ</h2>
       <p class="text-xs sm:text-sm font-bold text-navy bg-white border border-slate-200 p-4 mb-6 inline-block">
@@ -1796,7 +1808,7 @@
       <h2 class="text-3xl font-black text-navy mt-2">募集要項（常勤歯科医師）</h2>
     </div>
 
-    <div class="overflow-x-auto bg-white border border-slate-300">
+    <div class="overflow-x-auto w-full bg-white border border-slate-300">
       <table class="modern-table text-sm">
         <thead>
           <tr>
@@ -1978,7 +1990,7 @@
         </div>
       </div>
 
-      <div class="w-full lg:w-1/2 bg-white p-6 border border-slate-200">
+      <div class="w-full lg:w-1/2 min-w-0 bg-white p-4 sm:p-6 border border-slate-200 overflow-x-auto">
         <table class="w-full text-xs mb-3 border-collapse text-center">
           <thead>
             <tr class="bg-slate-100 text-navy">
